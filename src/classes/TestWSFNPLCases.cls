@@ -35,6 +35,7 @@ public class TestWSFNPLCases {
         loan__Loan_Purpose__c dummyLoanPurpose = loan.TestHelper.createLoanPurpose();        
         
         c = new Contact(LastName = 'Test');
+        c.Email = 'utkarsh@cloudlendinginc.com';
         c.MailingCity = 'RYE';
         c.MailingStreet = '22 Tower Street';
         c.MailingState = 'East Sussex';
