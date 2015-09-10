@@ -1,0 +1,16 @@
+<apex:page controller="WebToCaseController" showHeader="false" showChat="false" setup="false" sidebar="false" >
+  
+    Web to Case Visual Force page.<br/>
+      <apex:pageMessages /> 
+  <apex:form >
+      
+     <!-- <br/> Name :<apex:inputtext required="true" label="Name" value="{!c.SuppliedName}"/> -->
+      <br/> Contract ID &nbsp;&nbsp;&nbsp;<apex:inputtext required="true"  label="Mail" value="{!checkLA}"/> <br/> 
+      <br/> Subject &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <apex:inputText required="false" label="Subject" value="{!caseobj.Subject}"/><br/> 
+      <br/> Description  &nbsp;&nbsp;&nbsp;<apex:inputTextArea rows="5"   required="false" label="Description" value="{!caseobj.Description}"/><br/> 
+      
+      <br/><apex:commandButton value="Submit" action="{!Create_case}"/>
+  </apex:form>
+
+  <apex:outputLabel >Your received email id is {!contactEmail}</apex:outputLabel>
+</apex:page>

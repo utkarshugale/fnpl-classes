@@ -1,0 +1,9 @@
+<apex:page standardController="loan__Loan_Account__c">
+    <loan:HighlightsPanel labels="Available Credit, Delinquent Amount, Fraudulent Status,Status"
+        value1="{!loan__Loan_Account__c.Available_Credit__c}"
+        value2="{!loan__Loan_Account__c.loan__Amount_to_Current__c}"
+        value3="{!IF(loan__Loan_Account__c.loan__Invalid_Data__c = true,'True','False')}"
+        value4="{!loan__Loan_Account__c.loan__Loan_Status__c}"
+        class4="{!IF(loan__Loan_Account__c.loan__Loan_Status__c='Active - Bad Standing', 'red', 'green')}"
+        highlight="true" />
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page controller="WebToCaseController" title="Case thank you page" showHeader="false" standardStylesheets="true">
+ <!-- <c:SiteHeader /> <apex:composition template="{!$Site.Template}"> -->
+  <apex:insert name="header">
+   
+    <hr/>
+  </apex:insert>
+    <apex:define name="body"> 
+        <br/>
+        <center>
+        <apex:outputText value="Your information is saved.  Thank you for your interest!"/>
+        <br/>
+        <apex:outputText value="Your Case Reference Number is: {!casenum}"/>
+        </center>
+        <br/>
+        <br/>
+    </apex:define>
+ <!-- </apex:composition> -->
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page controller="RefundTransactionParser" title="Bank Statement Upload">
+        <apex:sectionHeader title="Upload Ixaris Refund Statement" />
+        <apex:outputLabel > <b>*Only Windows CSV file format is supported.</b></apex:outputLabel>
+        <apex:form id="form1">
+            <apex:pageBlock mode="edit" id="uploadDoc">
+            <apex:pageMessages />
+                <apex:pageBlockButtons location="top" title="Upload File Edit">
+                    <apex:actionStatus id="showstatus1" >
+                        <apex:facet name="start">
+                            <apex:image value="/img/loading32.gif" style="height:15px;"/>             
+
+              
+                        </apex:facet> 
+                    </apex:actionStatus>
+                    <apex:commandButton value="Reconcile Statement"  action="{!fileUploadParser}"/>
+                    
+                </apex:pageBlockButtons>
+                <apex:pageblockSection title="Upload File" columns="1">  
+                   <apex:pageBlockSectionItem >
+                       <apex:outputLabel for="fileId"> File </apex:outputLabel>
+                       <apex:inputFile value="{!fileParser}" id="fileId" filename="{!strFileName}" 
+
+required="true"/>
+                   </apex:pageBlockSectionItem>
+                </apex:pageblockSection>
+            </apex:pageBlock>
+        </apex:form>
+        
+</apex:page>
