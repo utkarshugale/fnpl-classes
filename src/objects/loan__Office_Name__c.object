@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Name of the office</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Bank_Account_Checks__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Bank Account (Checks)</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Please select a master GL.</errorMessage>
+            <filterItems>
+                <field>loan__MF_Account__c.loan__Is_Master__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Branches3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Branch_External_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Branch_s_Bank__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>For the fractionalization platform this is the main trust account.</inlineHelpText>
+        <label>Company&apos;s Bank</label>
+        <referenceTo>loan__Bank__c</referenceTo>
+        <relationshipLabel>Companies</relationshipLabel>
+        <relationshipName>Branches</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Cash_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Cash account tied to this branch.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please select the cash account you would like to associate with this branch.</inlineHelpText>
+        <label>Cash Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>GL is neither of type ASSET nor a master account.</errorMessage>
+            <filterItems>
+                <field>loan__MF_Account__c.loan__Account_Type__r.Name</field>
+                <operation>equals</operation>
+                <value>10000 - ASSETS</value>
+            </filterItems>
+            <filterItems>
+                <field>loan__MF_Account__c.loan__Is_Master__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Offices</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Check_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Bank Account (Operations)</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Please select a Master GL.</errorMessage>
+            <filterItems>
+                <field>loan__MF_Account__c.loan__Is_Master__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Branches</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Current_System_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Current System Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Days_in_advance_to_create_Collection_Rep__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Days in advance to create Collection Rep</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Inward_Check_Clearance_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Inward Check Clearance Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Please select a master GL.</errorMessage>
+            <filterItems>
+                <field>loan__MF_Account__c.loan__Is_Master__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Branches1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Is_Branch__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Is Branch</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Schedule_tied_to_Meeting_Schedule__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Loan Schedule tied to Meeting Schedule</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Mark_Suspended_After_Days__c</fullName>
+        <defaultValue>90</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Mark Suspended After Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Office_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Office Address</description>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <referenceTo>loan__Branch_Location__c</referenceTo>
+        <relationshipLabel>Companies</relationshipLabel>
+        <relationshipName>Offices</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Office_Name_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Company ID</description>
+        <displayFormat>Off-{0000}</displayFormat>
+        <externalId>false</externalId>
+        <inlineHelpText>Company ID</inlineHelpText>
+        <label>Company ID</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>loan__Office_Short_Name__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Office Short Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Office Short Name</inlineHelpText>
+        <label>Short Name</label>
+        <length>10</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Office_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Office Type</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <referenceTo>loan__Office_Type__c</referenceTo>
+        <relationshipLabel>Companies</relationshipLabel>
+        <relationshipName>Offices</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Outward_Check_Clearance_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Outward Check Clearance Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Please select a master GL.</errorMessage>
+            <filterItems>
+                <field>loan__MF_Account__c.loan__Is_Master__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Branches2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Parent_Office__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Parent Office</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Parent Office</inlineHelpText>
+        <label>Parent Company</label>
+        <referenceTo>loan__Office_Name__c</referenceTo>
+        <relationshipLabel>Companies</relationshipLabel>
+        <relationshipName>Offices</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Profit_and_Loss_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Profit and Loss Account</label>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Profit_and_Loss_Accounts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__State__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Write_Off_Suggestion_Days__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Write Off Suggestion Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Company</label>
+    <nameField>
+        <label>Company</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Companies</pluralLabel>
+    <recordTypes>
+        <fullName>loan__Root_Branch</fullName>
+        <active>true</active>
+        <description>This is the root branch/office in the organization. There can only be 1 such branch.</description>
+        <label>Root Branch</label>
+        <picklistValues>
+            <picklist>loan__State__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>loan__System_UpdateDate_Check</fullName>
+        <active>true</active>
+        <description>Current system date shouldn&apos;t be beyond the current calender date</description>
+        <errorConditionFormula>loan__Current_System_Date__c &gt; TODAY()</errorConditionFormula>
+        <errorMessage>Curent system date :[loan__Current_System_Date__c] shouldn&apos;t be beyond the current calender date:[TODAY()]</errorMessage>
+    </validationRules>
+</CustomObject>

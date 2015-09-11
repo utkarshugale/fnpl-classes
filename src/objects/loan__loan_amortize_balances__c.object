@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Amortize balances of the loan account</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Amortize_Calculation_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amortization Method</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It is the method used to calculate the Interest Amortization</inlineHelpText>
+        <label>Amortization Method</label>
+        <picklist>
+            <controllingField>loan__Balance_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Interest Bearing</fullName>
+                <controllingFieldValues>Interest</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Straight Line</fullName>
+                <controllingFieldValues>Pre Paid Fee</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Amortize_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract date of the loan account.</inlineHelpText>
+        <label>Amortization Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Balance_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Balance amount of amortize</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It is the estimated Interest on the loan account.</inlineHelpText>
+        <label>Balance Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Balance_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amortize Balance type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Balance type which will be amortized.</inlineHelpText>
+        <label>Balance Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pre Paid Fee</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Interest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Earned_Balance__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Earned Balance</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is zero initially. It is updated when amortization transaction is created.</inlineHelpText>
+        <label>Earned</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Enabled_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If enabled, this balance will be used to compute Interest Amortization</inlineHelpText>
+        <label>Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__First_Amortize_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>First Amortize Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the first payment date on the loan account.</inlineHelpText>
+        <label>First Amortize Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amortization Frequency</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the frequency of amortization process</inlineHelpText>
+        <label>Amortization Frequency</label>
+        <picklist>
+            <controllingField>loan__Balance_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <controllingFieldValues>Interest</controllingFieldValues>
+                <controllingFieldValues>Pre Paid Fee</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Last_Amortize_Calculation_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Last Amortization Method.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It is the balance earned in the last Amortization process run</inlineHelpText>
+        <label>Last Amortization Method</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Last_Earned_Balance__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Last Earned balance</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It is the balance earned in the last Amortization process run</inlineHelpText>
+        <label>Last Earned Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>loan__Loan_Account__c</referenceTo>
+        <relationshipLabel>Loan Amortize Balances</relationshipLabel>
+        <relationshipName>Loan_Amortize_Balances</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Next_Amortize_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Next Amortization Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It is the next date when Interest Amortize will run</inlineHelpText>
+        <label>Next Amortization Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amortize Rate</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Interest rate using which Interest will be calculated.</inlineHelpText>
+        <label>Amortize Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Term__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Amortized Term</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the term of the loan account</inlineHelpText>
+        <label>Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Writtenoff_Balance__c</fullName>
+        <deprecated>false</deprecated>
+        <description>WriteOff balance</description>
+        <externalId>false</externalId>
+        <label>WriteOff Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__last_Term__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Last Term</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It is the loan term at the time of last Amortization process run</inlineHelpText>
+        <label>Last Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Loan Amortize Balances</label>
+    <nameField>
+        <displayFormat>A-{0000000000}</displayFormat>
+        <label>Amortization Id</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Loan Amortize Balances</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

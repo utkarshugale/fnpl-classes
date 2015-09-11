@@ -236,7 +236,11 @@ public class BorrowerImpl {
                                                    Integer interestOnlyPeriod, 
                                                    Decimal balloonPayment,
                                                    Boolean ach,
-                                                   Id bankId) {
+                                                   Id bankId,
+                                                   Decimal interestRatePM,
+                                                   Decimal loanApr,
+                                                   Decimal creditScore,
+                                                   String creditScoreType) {
         //Savepoint sp = Database.setSavepoint();
         try {
             Id branchId = [SELECT Id FROM loan__Office_Name__c limit 1].Id;  
@@ -328,6 +332,12 @@ public class BorrowerImpl {
                                                 (Integer) retVal.loan__First_Installment_Date__c.day(), 
                                                 retVal.loan__Frequency_of_Loan_Payment__c, 
                                                 (Integer) retVal.loan__Number_of_Installments__c - 1);
+            
+            //Custom fields
+            retVal.Interest_Rate_PM__c = interestRatePM;
+            retVal.Credit_Score__c = creditScore;
+            retVal.Credit_Score_Type__c = creditScoreType;
+            retVal.Loan_APR__c = loanApr;
             
             return retVal;
         } catch (Exception e) {

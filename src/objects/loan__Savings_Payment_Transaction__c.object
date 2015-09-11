@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Balance_After__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Balance After</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Check_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(loan__Check__r.loan__Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Check Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Check__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Check</label>
+        <referenceTo>loan__Check__c</referenceTo>
+        <relationshipName>Savings_Payment_Transaction</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Cleared__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cleared</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Is_System_Generated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Is System Generated</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Opening_Balance__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Opening Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Partial_Payment__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( 
+                     AND( 
+                                 (loan__Transaction_Amount__c  &lt;  loan__Savings_Account__r.loan__Recommended_Mandatory_Amnt_for_Deposits__c) , 
+                                   ISPICKVAL(loan__Savings_Account__r.loan__Savings_Product_Name__r.loan__Type_of_Deposits__c , &quot;Mandatory&quot; )  
+                               ) ,
+         &quot;Yes&quot;,&quot;No&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Partial Payment</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Payment_Mode__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Payment Mode</label>
+        <referenceTo>loan__Payment_Mode__c</referenceTo>
+        <relationshipName>Savings_Payment_Transaction</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Receipt_Date__c</fullName>
+        <defaultValue>$User.loan__Current_Branch_s_System_Date__c</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Receipt Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Receipt_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <displayFormat>STID-{0000000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Receipt ID</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>loan__Rejected__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rejected</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Savings_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Savings Account</label>
+        <referenceTo>loan__Savings_Account__c</referenceTo>
+        <relationshipName>Savings_Payment_Transaction</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Supervision_Required__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Supervision Required</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Terminate_Fixed_Deposit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Terminate Fixed Deposit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Transaction_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Transaction Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Transaction_Date__c</fullName>
+        <defaultValue>$User.loan__Current_Branch_s_System_Date__c</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Transaction Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Transaction_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Transaction Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Deposit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Withdrawal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Savings Transaction</label>
+    <nameField>
+        <displayFormat>SPT-{000000000}</displayFormat>
+        <label>Savings Transaction ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Savings Transactions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>loan__Cant_be_cleared_and_rejected</fullName>
+        <active>true</active>
+        <errorConditionFormula>(loan__Cleared__c  = true) &amp;&amp; (loan__Rejected__c  = true)</errorConditionFormula>
+        <errorMessage>An error has occurred while updating the transaction.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Check_Amount</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Transaction_Amount__c !=  loan__Check__r.loan__Check_Amount__c</errorConditionFormula>
+        <errorMessage>Transaction amount doesn&apos;t match check amount.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Payment_Mode</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Payment_Mode__r.Name =  &apos;Check&apos; &amp;&amp; ISBLANK( loan__Check__c )</errorConditionFormula>
+        <errorMessage>Please input a check number.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__FD_Deposits_not_allowed</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( loan__Savings_Account__r.loan__Savings_Product_Name__r.loan__Product_Type__c , &apos;Fixed&apos;) 
+&amp;&amp;
+ ISPICKVAL( loan__Transaction_Type__c , &apos;Deposit&apos;)
+&amp;&amp;  loan__Is_System_Generated__c = false</errorConditionFormula>
+        <errorMessage>You cannot make deposits into a Fixed Deposit account.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__FD_Early_Withdrawals_Not_Allowed</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( loan__Savings_Account__r.loan__Savings_Product_Name__r.loan__Product_Type__c, &apos;Fixed&apos;) 
+&amp;&amp; loan__Savings_Account__r.loan__Savings_Product_Name__r.loan__Allow_Early_Withdrawals__c=false
+&amp;&amp; ISPICKVAL( loan__Transaction_Type__c , &apos;Withdrawal&apos;)
+&amp;&amp; NOT(loan__Terminate_Fixed_Deposit__c)</errorConditionFormula>
+        <errorMessage>This Fixed Deposit Account does not allow early withdrawals</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Maximum_Withdrawal_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( loan__Transaction_Type__c , &apos;Withdrawal&apos;) 
+&amp;&amp;
+NOT(ISNULL(loan__Savings_Account__r.loan__Savings_Product_Name__r.loan__Max_Amount_Per_Withdrawal__c)) 
+&amp;&amp;
+loan__Transaction_Amount__c &gt;  loan__Savings_Account__r.loan__Savings_Product_Name__r.loan__Max_Amount_Per_Withdrawal__c</errorConditionFormula>
+        <errorMessage>You are trying to withdraw more than what is allowed in the Savings Product definition.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Receipt_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Receipt_Date__c &gt; TODAY()</errorConditionFormula>
+        <errorMessage>Receipt date cannot be greater than calendar date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Receipt_Date_System_Date_Check</fullName>
+        <active>false</active>
+        <description>Deprecated since we can&apos;t use $User.mfiforce__Current_System_Date__c</description>
+        <errorConditionFormula>loan__Receipt_Date__c  &gt;  TODAY()</errorConditionFormula>
+        <errorMessage>The Receipt date cannot be past the current calendar date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Savings_Account_Status_check</fullName>
+        <active>true</active>
+        <description>Savings Account Status check</description>
+        <errorConditionFormula>NOT(ISPICKVAL( loan__Savings_Account__r.loan__Status__c, &apos;Active&apos;))</errorConditionFormula>
+        <errorMessage>The account not active yet! Please submit for approval.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Savings_Product_Status_check</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(ISPICKVAL(loan__Savings_Account__r.loan__Savings_Product_Name__r.loan__Status__c, &apos;Active&apos;))</errorConditionFormula>
+        <errorMessage>The Savings Product is not Active yet! Please submit for approval.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Share_Capital_Account_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNEW()  &amp;&amp; loan__Savings_Account__r.loan__Share_Capital_Account__c == true &amp;&amp; ISPICKVAL(loan__Transaction_Type__c,&quot;Withdrawal&quot;) &amp;&amp;
+ NOT(ISPICKVAL(loan__Savings_Account__r.loan__Client_ID__r.loan__Status__c, &quot;Closed&quot;))</errorConditionFormula>
+        <errorMessage>The funds in this &apos;Share Capital&apos; account can only be withdrawn once client ends his/her membership. The client status should be &apos;Closed&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Terminate_FD_does_not_make_sense</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(ISPICKVAL( loan__Savings_Account__r.loan__Savings_Product_Name__r.loan__Product_Type__c, &apos;Fixed&apos;))
+&amp;&amp; loan__Terminate_Fixed_Deposit__c</errorConditionFormula>
+        <errorMessage>This account is not a Fixed Deposit. Please uncheck the Terminate Fixed Deposit flag.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Transaction_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Transaction_Date__c &gt; TODAY()</errorConditionFormula>
+        <errorMessage>Transaction date cannot be greater than calendar date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Validate_Txn_Date_Against_System_Date</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( $User.loan__Current_System_Date__c != null,
+$User.loan__Current_System_Date__c !=  loan__Transaction_Date__c )</errorConditionFormula>
+        <errorMessage>Transaction Date must be the same as system date.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Disbursal Transaction Adjustment</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Adjustment_Txn_Date__c</fullName>
+        <defaultValue>$User.loan__Current_Branch_s_System_Date__c</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Adjustment Txn Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Adjustment Txn Date</inlineHelpText>
+        <label>Adjustment Txn Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Cleared__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cleared</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Disbursal_Transaction__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Loan Disbursal Transaction</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Loan Disbursal Transaction</inlineHelpText>
+        <label>Loan Disbursal Transaction</label>
+        <referenceTo>loan__Loan_Disbursal_Transaction__c</referenceTo>
+        <relationshipName>Disbursal_Transaction_Adjustment</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Receipt_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <displayFormat>DARID-{0000000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Receipt ID</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>loan__Rejected__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rejected</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Disbursal Transaction Reversal</label>
+    <nameField>
+        <displayFormat>DAI-{0000000000}</displayFormat>
+        <label>Disbursal Adjustment ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Disbursal Transaction Reversal</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>loan__Adjustment_Txn_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>loan__Loan_Disbursal_Transaction__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Adjustment_Txn_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Loan_Disbursal_Transaction__c</lookupPhoneDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>loan__Check_Existing_Reversal_Txn</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNEW() &amp;&amp; loan__Loan_Disbursal_Transaction__r.loan__Cleared_Reversal_Txn_Count__c &gt; 0</errorConditionFormula>
+        <errorMessage>This disbursal transaction has already been reversed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Transaction_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Adjustment_Txn_Date__c &gt; TODAY()</errorConditionFormula>
+        <errorMessage>Transaction date cannot be greater than calendar date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Validate_Txn_Date_Against_System_Date</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( $User.loan__Current_System_Date__c != null,
+$User.loan__Current_System_Date__c !=  loan__Adjustment_Txn_Date__c  )</errorConditionFormula>
+        <errorMessage>Transaction Date must be the same as system date.</errorMessage>
+    </validationRules>
+</CustomObject>

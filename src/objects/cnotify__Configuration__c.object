@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>cnotify__After_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>After Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cnotify__Before_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Before Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cnotify__Day__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This value indicates the number of days (before or after) the notification must be sent.</inlineHelpText>
+        <label>Day</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cnotify__Email_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Email Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>cnotify__Event__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the event for which the notification will be sent.</inlineHelpText>
+        <label>Event</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Loan Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan Funding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan Payment Reminder Before Due</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan Payment Reminder After Due</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delinquency Reminder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan Payment Received</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Savings Payment Debit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Savings Payment Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Investor Fund Deposited</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Investor Fund Withdrawn</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>cnotify__Ignore_Before_Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This will not consider Before Status value of status field. Only change on Status field&apos;s value will be tracked.</inlineHelpText>
+        <label>Ignore Before Status</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>cnotify__Object__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Object</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cnotify__Recipient_Field_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>It should be look-up field name of Contact on the Object that is specified in Object__c field on Configuration__c.</description>
+        <externalId>false</externalId>
+        <label>Recipient Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cnotify__Status_Field_API_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Status Field API Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cnotify__Text_Message__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Text Message</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>cnotify__Text_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Text Notification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>cnotify__Trigger_Based_Configuration__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Trigger Based Configuration</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Configuration</label>
+    <listViews>
+        <fullName>cnotify__All</fullName>
+        <columns>NAME</columns>
+        <columns>cnotify__Event__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>cnotify__Config</fullName>
+        <columns>NAME</columns>
+        <columns>cnotify__Day__c</columns>
+        <columns>cnotify__Email_Notification__c</columns>
+        <columns>cnotify__Event__c</columns>
+        <columns>cnotify__Object__c</columns>
+        <columns>cnotify__Text_Notification__c</columns>
+        <columns>cnotify__Text_Message__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Config</label>
+    </listViews>
+    <nameField>
+        <displayFormat>C-{000}</displayFormat>
+        <label>Configuration Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Configurations</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>cnotify__Day__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>cnotify__Event__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>cnotify__Email_Notification__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>cnotify__Text_Notification__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>cnotify__Days_value_for_Loan_Events</fullName>
+        <active>true</active>
+        <errorConditionFormula>(ISPICKVAL(cnotify__Event__c, &apos;Loan Payment Reminder Before Due&apos;) &amp;&amp; ISBLANK( cnotify__Day__c ))  || (ISPICKVAL(cnotify__Event__c, &apos;Loan Payment Reminder After Due&apos;) &amp;&amp; ISBLANK( cnotify__Day__c ))</errorConditionFormula>
+        <errorMessage>Please provide value in Days Field</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>cnotify__Notification_Type</fullName>
+        <active>true</active>
+        <description>At least one notification type should be selected.</description>
+        <errorConditionFormula>cnotify__Email_Notification__c = false &amp;&amp;  cnotify__Text_Notification__c = false</errorConditionFormula>
+        <errorMessage>At least one notification type should be selected</errorMessage>
+    </validationRules>
+</CustomObject>

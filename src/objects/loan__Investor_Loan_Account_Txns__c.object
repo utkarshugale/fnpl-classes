@@ -1,0 +1,1871 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__ACH_Filename__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>ACH Filename</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Balance_After__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Balance After</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Charged_Off_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Investment Order charged off date.</description>
+        <externalId>false</externalId>
+        <label>Charged Off Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Charged_Off_Fees__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Charged Off fees for an investment order.</description>
+        <externalId>false</externalId>
+        <label>Charged Off Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Charged_Off_Interest__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Charged Off Interest for an Investment Order.</description>
+        <externalId>false</externalId>
+        <label>Charged Off Interest</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Charged_Off_Principal__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Charged off principal for Investment Order</description>
+        <externalId>false</externalId>
+        <label>Charged Off Principal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__GL_Post_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>GL Post Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Accrual_On_Prin_Amount__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field will show on what amount interest has been calculated.</description>
+        <externalId>false</externalId>
+        <label>Interest Accrual Prin Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Accrual_To_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Interest accrual Done till date</description>
+        <externalId>false</externalId>
+        <label>Interest Accrual To Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Accrued_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Calculated Interest Accrued amount as on Payout date.</description>
+        <externalId>false</externalId>
+        <label>Interest Accrued Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Payment made towards Interest portion</description>
+        <externalId>false</externalId>
+        <label>Interest</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Service_Charge__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Service charge calculated on the interest Payout amount.</description>
+        <externalId>false</externalId>
+        <label>Interest Service Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_accrual_from_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>At the time of this transaction, Interest accrual is done from, this is for the informational purpose.</description>
+        <externalId>false</externalId>
+        <label>Interest Accrual From Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Investor_Loan__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Investment Order</label>
+        <referenceTo>loan__Investor_Loan__c</referenceTo>
+        <relationshipLabel>Investor Loan Transactions</relationshipLabel>
+        <relationshipName>Investor_Loan_Txns</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Investor_NameDELETE__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>loan__Investor_Loan__r.loan__Account__r.Name</formula>
+        <label>Investor NameDELETE (Deprecated)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Late_Fee_Service_Charge__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Service Charge on the payout of late fees</description>
+        <externalId>false</externalId>
+        <label>Late Fee Service Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Late_Fees_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Payment made towards fees.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payment made towards fees.</inlineHelpText>
+        <label>Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Payment_Transaction_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Time stamp of Loan Payment Transaction. Investor Transactions must be reversed in order starting from last investor payment created. We use this field to detect which Investor Transaction to reverse first.</description>
+        <externalId>false</externalId>
+        <label>Loan Payment Transaction Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Payment_Transaction__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Loan Payment Transaction</label>
+        <referenceTo>loan__Loan_Payment_Transaction__c</referenceTo>
+        <relationshipLabel>Investor Loan Transactions</relationshipLabel>
+        <relationshipName>Investor_Loan_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__New_Certificate_Rate__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>New Certificate rate after this txn posting.</description>
+        <externalId>false</externalId>
+        <label>New Certificate Rate</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__New_Service_Rate__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>New Service Rate After this txn posting</description>
+        <externalId>false</externalId>
+        <label>New Service Rate</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Old_Certificate_Rate__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Certificate Rate before this txn posting.</description>
+        <externalId>false</externalId>
+        <label>Old Certificate Rate</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Old_Service_Rate__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Service Rate, before this txn posting.</description>
+        <externalId>false</externalId>
+        <label>Old Service Rate</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Payment_Mode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>loan__Loan_Payment_Transaction__r.loan__Payment_Mode__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Payment Mode</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Post_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Post Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Principal_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Payment made towards Principal amount</description>
+        <externalId>false</externalId>
+        <label>Principal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Principal_Service_Charge__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Principal Service Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reason</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Reinvest_Interest__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reinvest Interest</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Reinvest_Principal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Investment order setting track field</description>
+        <externalId>false</externalId>
+        <label>Reinvest Principal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Approval_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Approval Date Snapshot</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Certificate_Rate__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The certificate rate for this investment. This is the rate which will be payable to the investor who buys invested in this loan and is entitled to its receivable stream.</description>
+        <externalId>false</externalId>
+        <label>Certificate Rate Snapshot</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Enabled_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>snapshot field</description>
+        <externalId>false</externalId>
+        <label>Snapshot Enabled Flag</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Interest_Amount_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Interest Amount paid on this investment.</description>
+        <externalId>false</externalId>
+        <label>Interest Amount Paid Snapshot</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Interest_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Payment made towards Interest portion</description>
+        <externalId>false</externalId>
+        <label>Interest Paid Snapshot</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Interest_Rate_On_Loan_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Interest Rate On Loan account</description>
+        <externalId>false</externalId>
+        <label>Interest Rate On Loan Snapshot</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Inv_Accrued_Interest_Amt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Payable Accrued Interest amount to investor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payable Accrued Interest amount to investor</inlineHelpText>
+        <label>Accrued Interest Snapshot</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Inv_Interest_Posted_Amt__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Interest Posted on account, this will be updated when the payment amount is being calculated.</description>
+        <externalId>false</externalId>
+        <label>Interest Balance Snapshot</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Inv_Last_Interest_Accrual_Post_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Last Interest accrual Posted</description>
+        <externalId>false</externalId>
+        <label>Last Interest Accrual Date Snapshot</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Investment_Amount__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Investment Amount Snapshot</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Investor_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>End Date Snapshot</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Investor_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Start date of the Investor</description>
+        <externalId>false</externalId>
+        <label>Start Date Snapshot</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Late_Fees_Amount_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Late Fees Paid on this account.</description>
+        <externalId>false</externalId>
+        <label>Late Fees Amount Paid Snapshot</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Loan_Delinquent_Days__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number_of_Days_Overdue__c on loan account</description>
+        <externalId>false</externalId>
+        <label>Loan Delinquent Days Snapshot</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Loan_Principal_Remaining__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Loan Principal Remaining Snapshot</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Loan_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Loan_Status__c on loan account</description>
+        <externalId>false</externalId>
+        <label>Loan Status Snapshot</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Principal_Amount_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Principal Amount Paid back to Investor.</description>
+        <externalId>false</externalId>
+        <label>Principal Amount Paid Snapshot</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Service_Rate__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>On this rate service charge will be charged to the investors for servicing loans, making Note payments and maintaining the accounts.
+The service charge paid by investors is on all amounts paid by the borrowers.</description>
+        <externalId>false</externalId>
+        <label>Service Rate Snapshot</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Share__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Describes the percent share of Investor in Loan amount</description>
+        <externalId>false</externalId>
+        <label>Share Snapshot</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Describes whether the record is in Active or Inactive state</description>
+        <externalId>false</externalId>
+        <label>Status Snapshot</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__SS_Total_Amount_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Amount paid back to Investor</description>
+        <externalId>false</externalId>
+        <label>Total Amount Paid Snapshot</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Sent_To_ACH_On__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the date the transaction was sent to ACH. The lock period for clearing is counted from this date.</inlineHelpText>
+        <label>Sent To ACH On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Sent_to_ACH__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sent to ACH</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Tax__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Total_Service_Charge__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Total Service Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Transaction_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Transaction Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Txn_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Transaction Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Txn_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Transaction Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRINCIPAL &amp; INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHARGE OFF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Txn_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Transaction Description</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Vat__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>VAT</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Write_Off_Recovery_Payment__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>loan__Loan_Payment_Transaction__r.loan__Write_Off_Recovery_Payment__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Write Off Recovery Payment</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__FFA_Journal_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>FFA Journal Created</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Service_Fee_Journal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Fee Journal</label>
+        <referenceTo>c2g__codaJournal__c</referenceTo>
+        <relationshipLabel>Investor Loan Transactions</relationshipLabel>
+        <relationshipName>Investor_Loan_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Service_Fee_Reversal_Journal_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Fee Reversal Journal Created</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Service_Fee_Reversal_Journal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Fee Reversal Journal</label>
+        <referenceTo>c2g__codaJournal__c</referenceTo>
+        <relationshipLabel>Investor Loan Transactions (Service Fee Reversal Journal)</relationshipLabel>
+        <relationshipName>Investor_Loan_Transactions3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Tax_Journal_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Journal Created</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Tax_Journal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Journal</label>
+        <referenceTo>c2g__codaJournal__c</referenceTo>
+        <relationshipLabel>Investor Loan Transactions (Tax Journal)</relationshipLabel>
+        <relationshipName>Investor_Loan_Transactions1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Tax_Reversal_Journal_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Reversal Journal Created</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Tax_Reversal_Journal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Reversal Journal</label>
+        <referenceTo>c2g__codaJournal__c</referenceTo>
+        <relationshipLabel>Investor Loan Transactions (Tax Reversal Journal)</relationshipLabel>
+        <relationshipName>Investor_Loan_Transactions2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>peer__Investment_Order_Post_Sale__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the new investment order that is created when the current investment order is sold. Typically the new investment order will belong to a different Account and old investment order will drop in value.</inlineHelpText>
+        <label>Investment Order Post Sale</label>
+        <referenceTo>loan__Investor_Loan__c</referenceTo>
+        <relationshipLabel>Investor Loan Transactions (Investment Order Post Sale)</relationshipLabel>
+        <relationshipName>Investor_Loan_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>peer__Number_of_Shares_Sold__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Number of Shares Sold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Sale_Fee__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sale Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Sale_Price_Per_Share__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sale Price Per Share</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Sale_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>peer__Number_of_Shares_Sold__c * peer__Sale_Price_Per_Share__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sale Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__VAT_On_Service_Charge__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>VAT platform is liable to pay.</description>
+        <externalId>false</externalId>
+        <label>VAT On Service Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Investor Loan Transaction</label>
+    <nameField>
+        <displayFormat>ILTID-{0000000000}</displayFormat>
+        <label>Investor Loan Transaction ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Investor Loan Transactions</pluralLabel>
+    <recordTypes>
+        <fullName>loan__Active</fullName>
+        <active>true</active>
+        <description>Record type for Active Transaction Code.</description>
+        <label>Active</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Certificate_Rate_Changed</fullName>
+        <active>true</active>
+        <label>Certificate Rate Changed</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__IO_Deactivated</fullName>
+        <active>true</active>
+        <description>Investment Order Deactivation</description>
+        <label>IO Deactivated</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Interest_Invested_Principal_Returned</fullName>
+        <active>true</active>
+        <description>Record type for INTEREST REINVESTED Transaction Code.</description>
+        <label>Interest Invested Principal Returned</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Investor_Payment_Reversed</fullName>
+        <active>true</active>
+        <label>Investor Payment Reversed</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Payment_Due</fullName>
+        <active>true</active>
+        <description>Record type for &apos;PAYMENT APPROVAL&apos; transaction code.</description>
+        <label>Payment Approval</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Payment_Paid</fullName>
+        <active>true</active>
+        <description>Record type for &apos;PAYMENT RELEASE&apos; Transaction Code.</description>
+        <label>Payment Release</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Principal_Interest_Invested</fullName>
+        <active>true</active>
+        <description>Record type for PRINCIPAL &amp; INTEREST REINVESTED Transaction Code.</description>
+        <label>Principal-Interest Invested</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Principal_Invested_Interest_Returned</fullName>
+        <active>true</active>
+        <description>Record type for &apos;PRINCIPAL REINVESTED&apos; Transaction Code.</description>
+        <label>Principal Invested Interest Returned</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Service_Rate_Changed</fullName>
+        <active>true</active>
+        <label>Service Rate Changed</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Write_Off</fullName>
+        <active>true</active>
+        <label>Write Off</label>
+        <picklistValues>
+            <picklist>loan__SS_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>De-Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Txn_Code__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CERTIFICATE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CHARGE OFF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DE-ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT APPROVAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT RELEASE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAYMENT REVERSED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL %26 INTEREST REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PRINCIPAL REINVESTED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SERVICE RATE CHANGE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

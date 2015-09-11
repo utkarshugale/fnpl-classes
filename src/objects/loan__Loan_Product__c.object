@@ -1,0 +1,3638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Lending Product Definition1</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Accrual_Based_Accounting__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This type of Accounting records income when earned and records deductions when expenses are incurred.</inlineHelpText>
+        <label>Accrual Based Accounting</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Accrual_Start_Basis__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Accrual Start Date on a Loan Account is set according to the Accrual Start Basis</inlineHelpText>
+        <label>Accrual Start Basis</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Contract Date</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disbursal Date</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Accrue_Income_On_Suspended_Account__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the income is to be accrued on a suspended account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if the income is to be accrued on a suspended account</inlineHelpText>
+        <label>Accrue Income On Suspended Account</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Advance_Tolerance_Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Advance Tolerance Amount, for LoC</description>
+        <externalId>false</externalId>
+        <label>Advance Tolerance Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Advance_Tolerance_Percent__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>%age for advance tolerance, for Loc</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Advance Tolerance Percentage, for Line of Credit.</inlineHelpText>
+        <label>Advance Tolerance %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Amortization_Calculation_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Deprecated)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the method used to calculate the Interest Amortization. Only Interest bearing is supported at the moment.</inlineHelpText>
+        <label>Amortization Method(Deprecated)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Interest Bearing</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Amortization_Enabled__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>(Deprecated)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(Deprecated)</inlineHelpText>
+        <label>Enabled(Deprecated)</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Amortization_Frequency__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated by abhinav</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the frequency of amortization process. Only End of the Month is supported at the moment.</inlineHelpText>
+        <label>Amortization Frequency(Deprecated)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Amortize_Balance_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Deprecated)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(Deprecated)</inlineHelpText>
+        <label>Amortize Balance Type(Deprecated)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Interest</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Approval_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The date on which the loan is approved.</inlineHelpText>
+        <label>Approval Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Can_Waive_Interest_on_Prepaid_loan__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, gives the option to waive future interest when using Repay Loan to repay full loan.  If not checked, interest is NOT waived by default.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, gives the option to waive future interest when using Repay Loan to repay full loan.  If not checked, interest is NOT waived by default.</inlineHelpText>
+        <label>Recalculate Interest on Prepayment</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Cash_Based_Accounting__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This type of Accounting reports income when received and reports expenses when paid</inlineHelpText>
+        <label>Cash Based Accounting</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Compare_with_Cash_Flow__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Check if during loan creation, loans of this product should have Client&apos;s Cash Flow data entered and compared</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check if during loan creation, loans of this product should have Client&apos;s Cash Flow data entered and compared</inlineHelpText>
+        <label>Compare with Cash Flow</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Currency__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Currency</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Currency</inlineHelpText>
+        <label>Currency</label>
+        <referenceTo>loan__Currency__c</referenceTo>
+        <relationshipName>Loan_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Days_In_A_Year__c</fullName>
+        <defaultValue>365</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Number of days in a year.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of days in a year.</inlineHelpText>
+        <label>Days In A Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Default_Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default interest rate</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default interest rate</inlineHelpText>
+        <label>Default Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Default_Number_of_Installments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default number of installments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default number of installments</inlineHelpText>
+        <label>Default Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Default_Overdue_Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Overdue Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Delinquency_Grace_Days__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of days the system will wait before categorizing the account as a delinquent account.</inlineHelpText>
+        <label>Delinquency Grace Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Digits_After_Decimals__c</fullName>
+        <defaultValue>2</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Specify the number of digits after decimals to be stored for calculation purposes.
+DEPRECATED - Moved this setup at Org Level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specify the number of digits after decimals to be stored for calculation purposes.
+DEPRECATED - Moved this setup at Org Level.</inlineHelpText>
+        <label>Digits After Decimal</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Discount_Applied_On__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Discount Applied On</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Interest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>loan__Discount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Discount %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Discounting_Based_Payoff__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Discounting Based Payoff</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Draw_Billing_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Billing Method for the draw period, for Loc Only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing Method for the draw period, for Loc Only.</inlineHelpText>
+        <label>Draw Billing Method</label>
+        <picklist>
+            <controllingField>loan__Funding_in_Tranches__c</controllingField>
+            <picklistValues>
+                <fullName>Interest Only</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <controllingFieldValues>unchecked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Percentage Of Remaining Balance</fullName>
+                <controllingFieldValues>unchecked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Principal Plus Interest</fullName>
+                <controllingFieldValues>unchecked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Draw_Period_Billing_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated, do not use</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated, do not use</inlineHelpText>
+        <label>Draw Period Billing Method</label>
+        <picklist>
+            <controllingField>loan__Funding_in_Tranches__c</controllingField>
+            <picklistValues>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Draw_Period_Interest_Calculation__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Draw Period Interest Calculation</label>
+        <picklist>
+            <controllingField>loan__Draw_Billing_Method__c</controllingField>
+            <picklistValues>
+                <fullName>Simple Interest</fullName>
+                <controllingFieldValues>Interest Only</controllingFieldValues>
+                <controllingFieldValues>Percentage Of Remaining Balance</controllingFieldValues>
+                <controllingFieldValues>Principal Plus Interest</controllingFieldValues>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Compounding Interest</fullName>
+                <controllingFieldValues>Interest Only</controllingFieldValues>
+                <controllingFieldValues>Principal Plus Interest</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Draw_Term_Payment_Percent__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>For Line of Credit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If you select the Draw billing method as Percentage Of Remaining Balance or Principal Plus Interest, Draw Term Payment % is used to derive the Principal bill amount.</inlineHelpText>
+        <label>Draw Term Payment %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Fee_Set__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Fee Set</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fee set contains the details of all the fees associated with the loan.</inlineHelpText>
+        <label>Fee Set</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Selected Fee Set&apos;s category must be of type &apos;Loan&apos; and it should include at least one fee.</errorMessage>
+            <filterItems>
+                <field>loan__Fee_Set__c.loan__Fee_Set_Category__c</field>
+                <operation>equals</operation>
+                <value>Loan</value>
+            </filterItems>
+            <filterItems>
+                <field>loan__Fee_Set__c.loan__Number_of_Fees__c</field>
+                <operation>notEqual</operation>
+                <value>0</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__Fee_Set__c</referenceTo>
+        <relationshipName>Loan_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Final_Rounding_Mode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DEPRECATED - Moved this setup at Org Level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DEPRECATED - Moved this setup at Org Level.</inlineHelpText>
+        <label>Final Rounding Mode</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ROUND_UP</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Final_Rounding_Precision__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the precision of the rounded amount for the final installment.
+DEPRECATED - Moved this setup at Org Level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the precision of the rounded amount for the final installment.
+DEPRECATED - Moved this setup at Org Level.</inlineHelpText>
+        <label>Final Rounding Precision</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ONE</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FIVE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TEN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HUNDRED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Floating_Rate_Change_Action__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>When floating rate is changed, the reset process will regenerate the repayment schedule of the loans and change either payment amount or keep the payment amount same and adjust the last payment as per this setup option.</inlineHelpText>
+        <label>Floating Rate Change Action</label>
+        <picklist>
+            <controllingField>loan__Interest_Rate_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Change Payment Amount</fullName>
+                <controllingFieldValues>Floating</controllingFieldValues>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Keep Same Payment Amount</fullName>
+                <controllingFieldValues>Floating</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Floating_Rate_Index__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Floating Rate Index for Lending Products with Interest Type &apos;Floating&apos;.</inlineHelpText>
+        <label>Floating Rate Index</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>loan__Floating_Rate_Index__c.loan__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>loan__Floating_Rate_Index__c.loan__Rate_Records_Count__c</field>
+                <operation>greaterThan</operation>
+                <value>0</value>
+            </filterItems>
+            <infoMessage>Select a Floating Rate Index for the Lending Product</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__Floating_Rate_Index__c</referenceTo>
+        <relationshipLabel>Lending Products</relationshipLabel>
+        <relationshipName>Lending_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Frequency_of_Loan_Payment__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This decides the Payment Frequency
+For loans, the below are supported ones.
+Daily
+Weekly
+Bi-weekly
+Semi-Monthly
+Monthly
+Bi-Monthly  
+Quarterly
+Semi-Annual
+Annual 
+SinglePmt
+For Line of credit only Monthly are supported.</inlineHelpText>
+        <label>Payment Frequency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bi-weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Semi-Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bi-Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Semi-Annual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SinglePmt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Funder__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Funder</label>
+        <referenceTo>loan__Funder__c</referenceTo>
+        <relationshipName>Loan_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Funding_Stop_Basis__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If Funding Stop Basis is set to &apos;Draw Period End&apos; then no further funding is allowed after Draw Period End Date</inlineHelpText>
+        <label>Funding Stop Basis</label>
+        <picklist>
+            <controllingField>loan__Funding_in_Tranches__c</controllingField>
+            <picklistValues>
+                <fullName>Draw Period End</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Funding_in_Tranches__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Funding in Tranches</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this to allow funding in tranches for the Loan amount</inlineHelpText>
+        <label>Funding in Tranches</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__General_Rounding_Mode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>DEPRECATED - Moved this setup at Org Level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Rounding mode for accrued numbers
+DEPRECATED - Moved this setup at Org Level.</inlineHelpText>
+        <label>Rounding Mode</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ROUND_NEAREST</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ROUND_UP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NONE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Grace_Period_Duration__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Grace Period can be defined in days. E.g. If Grace Period is defined as 7 days then the system will wait for 7 days before it starts accruing any Overdue Interest . On the 8th day if the amount is not paid then the system will accrue overdue interest for 8 days and continue accruing the overdue interest.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>It allows you to provide the client with additional days after the due date for loan repayment.
+For example, if the Grace period is defined as 7 days, then the system will wait for 7 days before it starts accruing any Overdue Interest .</inlineHelpText>
+        <label>Grace Period Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Grace_Period_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Grace Period Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Grace Period Type</inlineHelpText>
+        <label>Grace Period Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grace on all repayments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grace on principal payments only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Grace_Period_for_Repayments__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Grace period for repayments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Grace period for repayments
+This is the grace period for number of days before the accounts are moved to “Active in bad standing”</inlineHelpText>
+        <label>Grace Period for Repayments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Holiday_Shift__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If a date on the repayment schedule falls on a holiday, then shift the repayment date before or after the holiday.</inlineHelpText>
+        <label>Shift Repayment Schedule (Holiday)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Before</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>After</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Initial_Rounding_Mode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies how the numbers will be rounded.
+DEPRECATED - Moved this setup at Org Level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies how the numbers will be rounded.
+DEPRECATED - Moved this setup at Org Level.</inlineHelpText>
+        <label>Initial Rounding Mode</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ROUND_UP</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Initial_Rounding_Precision__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the precision of the rounded amount for initial installments.
+DEPRECATED - Moved this setup at Org Level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the precision of the rounded amount for initial installments.
+DEPRECATED - Moved this setup at Org Level.</inlineHelpText>
+        <label>Initial Rounding Precision</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ONE</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FIVE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TEN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HUNDRED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Calculation_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Flat - Interest computed every month on the original amount. 
+Declining Balance - Amount remaining unpaid on a loan, this decreases with every payment of the loan installment.
+Flexible Repayment - Interest rate changes over a period of time.</inlineHelpText>
+        <label>Billing Method</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Declining Balance</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Flat</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Flexible Repayment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Only_Period__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the period during which only the Interest is calculated and after that it takes both Principal and Interest.</inlineHelpText>
+        <label>Interest Only Period</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Rate_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Interest Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Fixed</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Floating</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Is_Sub_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Is Sub-Product</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Last_Month_Provision__c</fullName>
+        <defaultValue>0.0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Month&apos;s Provision</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Late_Charge_Grace_Days__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the number of days for which the system will wait before charging penalty on any charge that is due.</inlineHelpText>
+        <label>Late Charge Grace Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Cycle_Setup__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Loan Cycle Setup</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Same for all Loans</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>By Loan Cycle</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Product_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Loan Product Code</description>
+        <displayFormat>LPC-{0000}</displayFormat>
+        <externalId>false</externalId>
+        <inlineHelpText>System generated Loan Product Code</inlineHelpText>
+        <label>Loan Product Code</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Product_External_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Loan Product External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Product_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Product, Possible values are 
+a) Loan
+b) Line of Credit
+c) Amortization Based Loan
+d) Merchant Cash Advance</inlineHelpText>
+        <label>Product Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Loan</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Merchant Cash Advance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Amz Based Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__MCA_Billing_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>MCA Billing Type</label>
+        <picklist>
+            <controllingField>loan__MCA_Mode__c</controllingField>
+            <picklistValues>
+                <fullName>% of Revenue</fullName>
+                <controllingFieldValues>Revenue Transaction</controllingFieldValues>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__MCA_Mode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>MCA Mode</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Revenue Transaction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credit Card Processor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Payment Gateway</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Margin_Rate__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Margin Rate for Floating Interest Type Loan Products</inlineHelpText>
+        <label>Margin Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Max_Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Max interest rate</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Max interest rate</inlineHelpText>
+        <label>Max Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Max_Loan_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Max loan amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum loan amount to be disbursed for this Loan product</inlineHelpText>
+        <label>Max Financed Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Max_Loan_Cycle_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Max Loan Cycle Number</label>
+        <summarizedField>loan__Loan_Product_Cycle__c.loan__Cycle_Number__c</summarizedField>
+        <summaryForeignKey>loan__Loan_Product_Cycle__c.loan__Loan_Product__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>loan__Max_Number_of_Installments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Maximum number of installments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum number of installments for the loan</inlineHelpText>
+        <label>Max Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Max_Overdue_Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Max Overdue Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Maximum_Draw_Amount__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum Draw amount which can be given to the customer, applicable for line of credits.</inlineHelpText>
+        <label>Maximum Draw Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Maximum_Gap_Between_Installments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Maximum number of days between 2 installments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum number of days between 2 installments</inlineHelpText>
+        <label>Maximum Gap Between Installments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Min_Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Min Interest Rate</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Min Interest Rate</inlineHelpText>
+        <label>Min Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Min_Loan_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Min loan amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Minimum loan amount to be disbursed for this Loan product</inlineHelpText>
+        <label>Min Financed Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Min_Number_of_Installments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Minimum number of installments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Minimum number of installments for the loan</inlineHelpText>
+        <label>Min Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Min_Overdue_Interest_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Min Overdue Interest Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Minimum_Draw_Amount__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Minimum advance amount which can be drawn by customer, applicable for line of credits.</inlineHelpText>
+        <label>Minimum Draw Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Minimum_Gap_Between_Installments__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the minimum gap between 2 installments in days.
+Mandatory if Can configure variable installments is checked.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the minimum gap between 2 installments in days.
+Mandatory if Can configure variable installments is checked.</inlineHelpText>
+        <label>Minimum Gap Between Installments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Minimum_Installment_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Specifies the minimum installment amount for a variable installment loan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the minimum installment amount for a variable installment loan</inlineHelpText>
+        <label>Minimum Bill Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Number_Of_Prereqs__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Number Of Prereqs</label>
+        <summaryForeignKey>loan__Loan_Approval_Prerequisites__c.loan__Loan_Product__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>loan__Number_of_Loan_Cycles__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Number of Loan Cycles</label>
+        <summaryForeignKey>loan__Loan_Product_Cycle__c.loan__Loan_Product__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>loan__Parent_Loan_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Parent Loan Product</label>
+        <referenceTo>loan__Loan_Product__c</referenceTo>
+        <relationshipName>Loan_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Payment_Application_Mode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If the value is Future Dues, Reserve Amount For Next Due will be used for satisfying Bills. Otherwise, Reserve Amount For Next Due will not be used for satisfying Bills.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select Future Dues if the loan payments must be used to satisfy future dues. 
+ Select Current Dues if the loan payments must be used to to satisfy present dues.</inlineHelpText>
+        <label>Payment Application Mode</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Future Dues</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Current Dues</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Pre_Bill_Days__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of days for the bill to be generated before the due date.</inlineHelpText>
+        <label>Pre Bill Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Excess_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the Excess general ledger account for the lending product</inlineHelpText>
+        <label>Product Excess Account</label>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipLabel>Lending Products (Product Excess Account)</relationshipLabel>
+        <relationshipName>Loan_Products6Vhf</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_GL_Code_Interest__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Product GL Code - Interest</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product GL Code - Interest</inlineHelpText>
+        <label>Product GL Code - Interest</label>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Loan_Products1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_GL_Code_Principal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Product GL Code - Principal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product GL Code - Principal</inlineHelpText>
+        <label>Product GL Code - Principal</label>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Loan_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Int_On_Overdue_Income_Acc__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Product Int on Overdue Income Acc</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>loan__MF_Account__c.loan__Account_Type__r.Name</field>
+                <operation>equals</operation>
+                <value>30000 - INCOME</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipLabel>Lending Products (Product Int on Overdue Income Acc)</relationshipLabel>
+        <relationshipName>Loan_Products11</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Interest_Amortization_Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Product Interest Amortization Account</label>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Loan_Products9</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Interest_Income_Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the interest income general ledger account for the loan product.</inlineHelpText>
+        <label>Product Interest Income Account</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>loan__MF_Account__c.loan__Account_Type__r.Name</field>
+                <operation>equals</operation>
+                <value>30000 - INCOME</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipLabel>Lending Products (Product Interest Income Account)</relationshipLabel>
+        <relationshipName>Loan_Products3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Loan_Control_Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the loan control general ledger account for the loan product.</inlineHelpText>
+        <label>Product Loan Control Account</label>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Loan_Products2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Loan_Loss_Provision_Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the loan loss provision general ledger account for the loan product.</inlineHelpText>
+        <label>Product Loan Loss Provision Account</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>loan__MF_Account__c.loan__Account_Type__r.Name</field>
+                <operation>equals</operation>
+                <value>40000 - EXPENDITURE</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipLabel>Lending Products (Product Loan Loss Provision Account)</relationshipLabel>
+        <relationshipName>Loan_Products6</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Loan_Loss_Reserve_Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the loan loss reverse general ledger account for the loan product.</inlineHelpText>
+        <label>Product Loan Loss Reserve Account</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>loan__MF_Account__c.loan__Account_Type__r.Name</field>
+                <operation>equals</operation>
+                <value>20000 - LIABILITIES</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipLabel>Lending Products (Product Loan Loss Reserve Account)</relationshipLabel>
+        <relationshipName>Loan_Products8</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Overdue_Interest_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Product Overdue Interest Account</label>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Loan_Products4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Suspended_Int_On_Overdue_Acc__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Product Suspended Int On Overdue Acc</label>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Loan_Products10</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Suspended_Interest_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Product Suspended Interest Account</label>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Loan_Products5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Product_Write_Off_Recovery_Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the write-off recovery general ledger account for the loan product.</inlineHelpText>
+        <label>Product Write-Off Recovery Account</label>
+        <referenceTo>loan__MF_Account__c</referenceTo>
+        <relationshipName>Loan_Products7</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Recalculate_Interest_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This flag will be applicable to AMZ based loans, where we need to recalculate the interest for the loan actions instead of using the interest rate on contract.</inlineHelpText>
+        <label>Recalculate Interest</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Refund_Allowed__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Refund Allowed.</description>
+        <externalId>false</externalId>
+        <label>Refund Allowed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Refund_Tolerance_Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Refund tolerance, applicable for Loc and Loans</description>
+        <externalId>false</externalId>
+        <label>Refund Tolerance Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Repayment_Billing_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Repayment Billing Method to Line of Credit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is effective once the Draw period is completed</inlineHelpText>
+        <label>Repayment Billing Method</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Percentage Of Remaining Balance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Principal Plus Interest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Repayment_Period_Interest_Calculation__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Repayment Period Interest Calculation</label>
+        <picklist>
+            <controllingField>loan__Repayment_Billing_Method__c</controllingField>
+            <picklistValues>
+                <fullName>Simple Interest</fullName>
+                <controllingFieldValues>Interest Only</controllingFieldValues>
+                <controllingFieldValues>Percentage Of Remaining Balance</controllingFieldValues>
+                <controllingFieldValues>Principal Plus Interest</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Compounding Interest</fullName>
+                <controllingFieldValues>Interest Only</controllingFieldValues>
+                <controllingFieldValues>Principal Plus Interest</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Repayment_Procedure__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This  field contains the procedure which will be followed to create the installment schedule. The two types of procedures are:
+ EMI (Equated Monthly Installments) and Flexible.</inlineHelpText>
+        <label>Repayment Procedure</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Equal Monthly Installments</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Flexible</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Repayment_Start_Basis__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>For a funding in tranches loan, the regular repayment will start depending upon the value of this field.</inlineHelpText>
+        <label>Repayment Start Basis</label>
+        <picklist>
+            <controllingField>loan__Funding_in_Tranches__c</controllingField>
+            <picklistValues>
+                <fullName>Full Disbursal</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Draw Period End</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Repayment_Term_Payment_Percent__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Repayment Term Payment Percentage, for Line of credit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is used to generate the bill after the Draw period</inlineHelpText>
+        <label>Repayment Term Payment %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Savings_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Savings Product</label>
+        <referenceTo>loan__Savings_Product__c</referenceTo>
+        <relationshipName>Loan_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Time_Counting_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>1) Month and Days will use 360 days in a year for the Interest calculation.
+2) Actual Days will use 365 days in a year for the Interest calculation.</inlineHelpText>
+        <label>Time Counting Method</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Actual Days</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Month and Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Write_off_Tolerance_Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The Write off tolerance amount determines the maximum amount that the system can write off</inlineHelpText>
+        <label>Write off Tolerance Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Interest_Income__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Interest Income</label>
+        <referenceTo>c2g__codaGeneralLedgerAccount__c</referenceTo>
+        <relationshipName>Loan_Products2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Interest_Receivable__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Interest Receivable</label>
+        <referenceTo>c2g__codaGeneralLedgerAccount__c</referenceTo>
+        <relationshipName>Loan_Products1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Principal_Receivable__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Principal Receivable</label>
+        <referenceTo>c2g__codaGeneralLedgerAccount__c</referenceTo>
+        <relationshipName>Loan_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Lending Product</label>
+    <nameField>
+        <label>Loan Product Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Lending Products</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>loan__Amz_Based_Loan_Product_Record_Type</fullName>
+        <active>true</active>
+        <description>Amortization Based Payment Processing</description>
+        <label>Amz Based Loan Product Record Type</label>
+        <picklistValues>
+            <picklist>loan__Accrual_Start_Basis__c</picklist>
+            <values>
+                <fullName>Contract Date</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Disbursal Date</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortization_Calculation_Method__c</picklist>
+            <values>
+                <fullName>Interest Bearing</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortization_Frequency__c</picklist>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortize_Balance_Type__c</picklist>
+            <values>
+                <fullName>Interest</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Period_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Period_Interest_Calculation__c</picklist>
+            <values>
+                <fullName>Compounding Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Simple Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Final_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Final_Rounding_Precision__c</picklist>
+            <values>
+                <fullName>FIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HUNDRED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TEN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Floating_Rate_Change_Action__c</picklist>
+            <values>
+                <fullName>Change Payment Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Keep Same Payment Amount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Frequency_of_Loan_Payment__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bi-Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bi-weekly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi-Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi-Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SinglePmt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__General_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>NONE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_NEAREST</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Grace_Period_Type__c</picklist>
+            <values>
+                <fullName>Grace on all repayments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace on principal payments only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Holiday_Shift__c</picklist>
+            <values>
+                <fullName>After</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Initial_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Initial_Rounding_Precision__c</picklist>
+            <values>
+                <fullName>FIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HUNDRED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TEN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Interest_Calculation_Method__c</picklist>
+            <values>
+                <fullName>Declining Balance</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Flat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flexible Repayment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Interest_Rate_Type__c</picklist>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Floating</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Loan_Cycle_Setup__c</picklist>
+            <values>
+                <fullName>By Loan Cycle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Same for all Loans</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Loan_Product_Type__c</picklist>
+            <values>
+                <fullName>Amz Based Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Merchant Cash Advance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__MCA_Billing_Type__c</picklist>
+            <values>
+                <fullName>%25 of Revenue</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__MCA_Mode__c</picklist>
+            <values>
+                <fullName>Credit Card Processor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment Gateway</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Transaction</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Payment_Application_Mode__c</picklist>
+            <values>
+                <fullName>Current Dues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future Dues</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Of Remaining Balance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal Plus Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Period_Interest_Calculation__c</picklist>
+            <values>
+                <fullName>Compounding Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Simple Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Procedure__c</picklist>
+            <values>
+                <fullName>Equal Monthly Installments</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Flexible</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Time_Counting_Method__c</picklist>
+            <values>
+                <fullName>Actual Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month and Days</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Line_Of_Credit_Product_Record_Type</fullName>
+        <active>true</active>
+        <description>Line Of Credit Product Record Type</description>
+        <label>Line Of Credit Product Record Type</label>
+        <picklistValues>
+            <picklist>loan__Accrual_Start_Basis__c</picklist>
+            <values>
+                <fullName>Contract Date</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Disbursal Date</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortization_Calculation_Method__c</picklist>
+            <values>
+                <fullName>Interest Bearing</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortization_Frequency__c</picklist>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortize_Balance_Type__c</picklist>
+            <values>
+                <fullName>Interest</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Of Remaining Balance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal Plus Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Period_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Period_Interest_Calculation__c</picklist>
+            <values>
+                <fullName>Compounding Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Simple Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Final_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Final_Rounding_Precision__c</picklist>
+            <values>
+                <fullName>FIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HUNDRED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TEN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Floating_Rate_Change_Action__c</picklist>
+            <values>
+                <fullName>Change Payment Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Keep Same Payment Amount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Frequency_of_Loan_Payment__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bi-Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bi-weekly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi-Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi-Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SinglePmt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__General_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>NONE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_NEAREST</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Grace_Period_Type__c</picklist>
+            <values>
+                <fullName>Grace on all repayments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace on principal payments only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Holiday_Shift__c</picklist>
+            <values>
+                <fullName>After</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Initial_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Initial_Rounding_Precision__c</picklist>
+            <values>
+                <fullName>FIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HUNDRED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TEN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Interest_Calculation_Method__c</picklist>
+            <values>
+                <fullName>Declining Balance</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Flat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flexible Repayment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Interest_Rate_Type__c</picklist>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Floating</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Loan_Cycle_Setup__c</picklist>
+            <values>
+                <fullName>By Loan Cycle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Same for all Loans</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Loan_Product_Type__c</picklist>
+            <values>
+                <fullName>Amz Based Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Merchant Cash Advance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__MCA_Billing_Type__c</picklist>
+            <values>
+                <fullName>%25 of Revenue</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__MCA_Mode__c</picklist>
+            <values>
+                <fullName>Credit Card Processor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment Gateway</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Transaction</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Payment_Application_Mode__c</picklist>
+            <values>
+                <fullName>Current Dues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future Dues</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Of Remaining Balance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal Plus Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Period_Interest_Calculation__c</picklist>
+            <values>
+                <fullName>Compounding Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Simple Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Procedure__c</picklist>
+            <values>
+                <fullName>Equal Monthly Installments</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Flexible</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Time_Counting_Method__c</picklist>
+            <values>
+                <fullName>Actual Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month and Days</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Loan_Product_Record_Type</fullName>
+        <active>true</active>
+        <description>Actual Interest Based Payment Processing</description>
+        <label>Loan Product Record Type</label>
+        <picklistValues>
+            <picklist>loan__Accrual_Start_Basis__c</picklist>
+            <values>
+                <fullName>Contract Date</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Disbursal Date</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortization_Calculation_Method__c</picklist>
+            <values>
+                <fullName>Interest Bearing</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortization_Frequency__c</picklist>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortize_Balance_Type__c</picklist>
+            <values>
+                <fullName>Interest</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Period_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Period_Interest_Calculation__c</picklist>
+            <values>
+                <fullName>Compounding Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Simple Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Final_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Final_Rounding_Precision__c</picklist>
+            <values>
+                <fullName>FIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HUNDRED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TEN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Floating_Rate_Change_Action__c</picklist>
+            <values>
+                <fullName>Change Payment Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Keep Same Payment Amount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Frequency_of_Loan_Payment__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bi-Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bi-weekly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi-Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi-Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SinglePmt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__General_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>NONE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_NEAREST</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Grace_Period_Type__c</picklist>
+            <values>
+                <fullName>Grace on all repayments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace on principal payments only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Holiday_Shift__c</picklist>
+            <values>
+                <fullName>After</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Initial_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Initial_Rounding_Precision__c</picklist>
+            <values>
+                <fullName>FIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HUNDRED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TEN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Interest_Calculation_Method__c</picklist>
+            <values>
+                <fullName>Declining Balance</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Flat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flexible Repayment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Interest_Rate_Type__c</picklist>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Floating</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Loan_Cycle_Setup__c</picklist>
+            <values>
+                <fullName>By Loan Cycle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Same for all Loans</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Loan_Product_Type__c</picklist>
+            <values>
+                <fullName>Amz Based Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Merchant Cash Advance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__MCA_Billing_Type__c</picklist>
+            <values>
+                <fullName>%25 of Revenue</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__MCA_Mode__c</picklist>
+            <values>
+                <fullName>Credit Card Processor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment Gateway</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Transaction</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Payment_Application_Mode__c</picklist>
+            <values>
+                <fullName>Current Dues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future Dues</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Of Remaining Balance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal Plus Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Period_Interest_Calculation__c</picklist>
+            <values>
+                <fullName>Compounding Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Simple Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Procedure__c</picklist>
+            <values>
+                <fullName>Equal Monthly Installments</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Flexible</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Time_Counting_Method__c</picklist>
+            <values>
+                <fullName>Actual Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month and Days</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>loan__Merchant_Cash_Advance</fullName>
+        <active>true</active>
+        <description>Merchant Cash Advance</description>
+        <label>Merchant Cash Advance</label>
+        <picklistValues>
+            <picklist>loan__Accrual_Start_Basis__c</picklist>
+            <values>
+                <fullName>Contract Date</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Disbursal Date</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortization_Calculation_Method__c</picklist>
+            <values>
+                <fullName>Interest Bearing</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortization_Frequency__c</picklist>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Amortize_Balance_Type__c</picklist>
+            <values>
+                <fullName>Interest</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Period_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Draw_Period_Interest_Calculation__c</picklist>
+            <values>
+                <fullName>Compounding Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Simple Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Final_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Final_Rounding_Precision__c</picklist>
+            <values>
+                <fullName>FIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HUNDRED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TEN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Floating_Rate_Change_Action__c</picklist>
+            <values>
+                <fullName>Change Payment Amount</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Keep Same Payment Amount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Frequency_of_Loan_Payment__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bi-Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bi-weekly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi-Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Semi-Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SinglePmt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__General_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>NONE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_NEAREST</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Grace_Period_Type__c</picklist>
+            <values>
+                <fullName>Grace on all repayments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Grace on principal payments only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Holiday_Shift__c</picklist>
+            <values>
+                <fullName>After</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Before</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Initial_Rounding_Mode__c</picklist>
+            <values>
+                <fullName>ROUND_DOWN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROUND_UP</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Initial_Rounding_Precision__c</picklist>
+            <values>
+                <fullName>FIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HUNDRED</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ONE</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>TEN</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Interest_Calculation_Method__c</picklist>
+            <values>
+                <fullName>Declining Balance</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Flat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flexible Repayment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Interest_Rate_Type__c</picklist>
+            <values>
+                <fullName>Fixed</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Floating</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Loan_Cycle_Setup__c</picklist>
+            <values>
+                <fullName>By Loan Cycle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Same for all Loans</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Loan_Product_Type__c</picklist>
+            <values>
+                <fullName>Amz Based Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Line of Credit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Merchant Cash Advance</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__MCA_Billing_Type__c</picklist>
+            <values>
+                <fullName>%25 of Revenue</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__MCA_Mode__c</picklist>
+            <values>
+                <fullName>Credit Card Processor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment Gateway</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Transaction</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Payment_Application_Mode__c</picklist>
+            <values>
+                <fullName>Current Dues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Future Dues</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Billing_Method__c</picklist>
+            <values>
+                <fullName>Interest Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Percentage Of Remaining Balance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Principal Plus Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Period_Interest_Calculation__c</picklist>
+            <values>
+                <fullName>Compounding Interest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Simple Interest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Repayment_Procedure__c</picklist>
+            <values>
+                <fullName>Equal Monthly Installments</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Flexible</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>loan__Time_Counting_Method__c</picklist>
+            <values>
+                <fullName>Actual Days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Month and Days</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>loan__Check_Accounting_Type</fullName>
+        <active>true</active>
+        <errorConditionFormula>(loan__Accrual_Based_Accounting__c &amp;&amp;  loan__Cash_Based_Accounting__c)
+||
+(NOT(loan__Accrual_Based_Accounting__c) &amp;&amp;  NOT(loan__Cash_Based_Accounting__c))</errorConditionFormula>
+        <errorMessage>Both accrual and cash based accounting cannot be checked or unchecked.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Default_Term</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(loan__Default_Number_of_Installments__c &lt; loan__Min_Number_of_Installments__c, loan__Default_Number_of_Installments__c &gt; loan__Max_Number_of_Installments__c)</errorConditionFormula>
+        <errorMessage>Default Term is Invalid</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Financed_Amount_Negative</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(loan__Min_Loan_Amount__c &lt; 0, loan__Max_Loan_Amount__c &lt; 0)</errorConditionFormula>
+        <errorMessage>Invalid Minimum and Maximum Financed Amount.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Interest_Rate</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(loan__Min_Interest_Rate__c  &lt; 0, loan__Max_Interest_Rate__c &lt; 0, loan__Max_Interest_Rate__c &lt; loan__Default_Interest_Rate__c, loan__Min_Interest_Rate__c &gt; loan__Default_Interest_Rate__c )</errorConditionFormula>
+        <errorMessage>Invalid Interest Rate</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_LOC_Product_Record_Type</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( (RecordType.DeveloperName == &apos;Line_Of_Credit_Product_Record_Type&apos;) &amp;&amp; (  NOT(ISPICKVAL(loan__Loan_Product_Type__c, &apos;Line of Credit&apos;))  ) , true, false)</errorConditionFormula>
+        <errorMessage>Product type should be &apos;Line of Credit&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Loan_Cycle_Setup_For_Amount</fullName>
+        <active>false</active>
+        <description>Deprecated by Abhinav and Snehal, not supported.</description>
+        <errorConditionFormula>AND(  ISPICKVAL(loan__Loan_Cycle_Setup__c, &apos;Same for all Loans&apos;) ,OR( ISBLANK( loan__Max_Loan_Amount__c ) , ISBLANK( loan__Min_Loan_Amount__c ) ) )</errorConditionFormula>
+        <errorMessage>Please fill out the Loan section.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Loan_Cycle_Setup_For_Installment</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(  ISPICKVAL(loan__Loan_Cycle_Setup__c, &apos;Same for all Loans&apos;) ,OR( ISBLANK(  loan__Minimum_Gap_Between_Installments__c ) , ISBLANK(  loan__Maximum_Gap_Between_Installments__c ), ISBLANK(  loan__Max_Number_of_Installments__c ) , ISBLANK(  loan__Min_Number_of_Installments__c ) , ISBLANK(  loan__Minimum_Installment_Amount__c ),  ISBLANK( loan__Default_Number_of_Installments__c )   ) )</errorConditionFormula>
+        <errorMessage>Please fill out the Installment section.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Loan_Cycle_Setup_For_Interest</fullName>
+        <active>false</active>
+        <description>Deprecated by Abhinav and Snehal, not supported.</description>
+        <errorConditionFormula>AND(  ISPICKVAL(loan__Loan_Cycle_Setup__c, &apos;Same for all Loans&apos;) ,OR( ISBLANK( loan__Max_Interest_Rate__c ) , ISBLANK( loan__Min_Interest_Rate__c ),ISBLANK( loan__Default_Interest_Rate__c )  ) )</errorConditionFormula>
+        <errorMessage>Please fill out the Interest section.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Loan_Product_Record_Type</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( (RecordType.DeveloperName == &apos;Loan_Product_Record_Type&apos;) &amp;&amp; (  NOT(ISPICKVAL(loan__Loan_Product_Type__c, &apos;Loan&apos;))  ) , true, false)</errorConditionFormula>
+        <errorMessage>Product type should be &apos;Loan&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Product_Name</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(Name) || ISNULL(Name)</errorConditionFormula>
+        <errorMessage>Loan Product name cannot be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Product_Type</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(loan__Loan_Product_Type__c,&quot;&quot;)</errorConditionFormula>
+        <errorMessage>Product Type Cannot be Null</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Term_Negative</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR( loan__Min_Number_of_Installments__c &lt; 0 , loan__Max_Number_of_Installments__c &lt; 0, loan__Default_Number_of_Installments__c &lt; 0)</errorConditionFormula>
+        <errorMessage>Term cannot be less than 0.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Unique_Loan_Product</fullName>
+        <active>true</active>
+        <errorConditionFormula>Name = VLOOKUP( $ObjectType.loan__Loan_Product__c.Fields.Name , $ObjectType.loan__Loan_Product__c.Fields.Name , Name ) 
+&amp;&amp; 
+Id &lt;&gt; VLOOKUP( $ObjectType.loan__Loan_Product__c.Fields.Id , $ObjectType.loan__Loan_Product__c.Fields.Name , Name )</errorConditionFormula>
+        <errorMessage>Loan Product Name already exists.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Count_Loan_Approval_Prereqs</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Number_Of_Prereqs__c &gt; 1</errorConditionFormula>
+        <errorMessage>You can only associate one Loan Approval Prerequisite with a Loan Product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Floating_Interest_Rate_Index_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Interest_Rate_Type__c,&quot;Floating&quot;),
+     ISBLANK(loan__Floating_Rate_Index__c))</errorConditionFormula>
+        <errorDisplayField>loan__Floating_Rate_Index__c</errorDisplayField>
+        <errorMessage>Floating Rate Index cannot be null for a Lending Product with Interest Type &apos;Floating&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Floating_Rate_Change_Action_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Interest_Rate_Type__c,&apos;Floating&apos;),
+    ISBLANK(TEXT(loan__Floating_Rate_Change_Action__c)))</errorConditionFormula>
+        <errorDisplayField>loan__Floating_Rate_Change_Action__c</errorDisplayField>
+        <errorMessage>Floating Rate Change Action cannot be null for a Lending Product with Interest Type &apos;Floating&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Funding_in_Tranches_in_Line_of_Credit</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Product_Type__c, &apos;Line of Credit&apos;), loan__Funding_in_Tranches__c)</errorConditionFormula>
+        <errorMessage>Funding in Tranches cannot be checked for &apos;Line of Credit&apos; Product Type</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Interest_Only_Period_Value_Check</fullName>
+        <active>true</active>
+        <description>Interest only period shouldn&apos;t be negative</description>
+        <errorConditionFormula>loan__Interest_Only_Period__c  &lt; 0</errorConditionFormula>
+        <errorMessage>&apos;Interest Only Period&apos; can&apos;t be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Interest_Only_Product_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+ISPICKVAL( loan__Interest_Calculation_Method__c , &apos;Interest Only&apos;), 
+ISBLANK(loan__Interest_Only_Period__c) 
+)</errorConditionFormula>
+        <errorMessage>&apos;Interest Only Period&apos; must be provided for an &apos;Interest Only&apos; product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Interest_Rate_Boundary_Check</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Cycle_Setup__c, &apos;Same for all Loans&apos;),(loan__Default_Interest_Rate__c &gt; loan__Max_Interest_Rate__c
+||
+loan__Default_Interest_Rate__c &lt; loan__Min_Interest_Rate__c))</errorConditionFormula>
+        <errorMessage>The Default Interest Rate should fall between the specified Limits.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Negative_Delinquency_Grace_Days_Check</fullName>
+        <active>true</active>
+        <description>&quot;Delinquency Grace Days&quot; cannot be negative</description>
+        <errorConditionFormula>loan__Delinquency_Grace_Days__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>loan__Delinquency_Grace_Days__c</errorDisplayField>
+        <errorMessage>&apos;Delinquency Grace Days&apos; cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Negative_Late_Charge_Grace_Days_Check</fullName>
+        <active>true</active>
+        <description>&quot;Late Charge Grace Days&quot; cannot be negative</description>
+        <errorConditionFormula>loan__Late_Charge_Grace_Days__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>loan__Late_Charge_Grace_Days__c</errorDisplayField>
+        <errorMessage>&apos;Late Charge Grace Days&apos; cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Negative_Write_off_Tolerance_Amount_Chek</fullName>
+        <active>true</active>
+        <description>&apos;Write off Tolerance Amount&apos; cannot be negative</description>
+        <errorConditionFormula>loan__Write_off_Tolerance_Amount__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>loan__Write_off_Tolerance_Amount__c</errorDisplayField>
+        <errorMessage>&apos;Write off Tolerance Amount&apos; cannot be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__No_of_Installments_Boundary_Check</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Cycle_Setup__c, &apos;Same for all Loans&apos;),( loan__Default_Number_of_Installments__c &gt; loan__Max_Number_of_Installments__c 
+|| 
+loan__Default_Number_of_Installments__c &lt; loan__Min_Number_of_Installments__c ))</errorConditionFormula>
+        <errorDisplayField>loan__Default_Number_of_Installments__c</errorDisplayField>
+        <errorMessage>The default No. of Installments should fall between the specified Limits.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Overdue_Interest_Rate_Boundary_Check</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Cycle_Setup__c, &apos;Same for all Loans&apos;),(loan__Default_Overdue_Interest_Rate__c &gt; loan__Max_Overdue_Interest_Rate__c
+||
+loan__Default_Overdue_Interest_Rate__c &lt; loan__Min_Overdue_Interest_Rate__c))</errorConditionFormula>
+        <errorMessage>The Default Overdue Interest Rate should fall between the specified Limits.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Pre_Bill_Days_Value_Check</fullName>
+        <active>true</active>
+        <description>Pre Bill Days shouldn&apos;t be negative</description>
+        <errorConditionFormula>loan__Pre_Bill_Days__c &lt;0</errorConditionFormula>
+        <errorMessage>&apos;Pre Bill Days&apos; can&apos;t be negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Savings_Deposit_type_must_be_Mandatory</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISPICKVAL(loan__Savings_Product__r.loan__Type_of_Deposits__c, &quot;Voluntary&quot;)</errorConditionFormula>
+        <errorMessage>Savings Must be Mandatory. Check linked Savings Product definition.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Savings_Product_must_be_active</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISPICKVAL( loan__Savings_Product__r.loan__Status__c , &quot;Active&quot;)</errorConditionFormula>
+        <errorMessage>Savings Product must be active. Please check its status.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>loan__Regenerate_Accounting_Rules</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Regenerate Accounting Rules</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>function loadScript(url) { 
+var request; 
+if (window.XMLHttpRequest) { 
+request = new XMLHttpRequest(); 
+} else if (window.ActiveXObject) { 
+request = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;); 
+if (!request) { 
+request = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); 
+} 
+} 
+
+var se = document.createElement(&apos;script&apos;); 
+se.type = &quot;text/javascript&quot;; 
+request.open(&quot;GET&quot;, url, false); 
+request.send(null); 
+se.text = request.responseText; 
+document.getElementsByTagName(&apos;head&apos;)[0].appendChild(se); 
+} 
+
+loadScript(&quot;/soap/ajax/13.0/connection.js&quot;); 
+loadScript(&quot;/soap/ajax/12.0/apex.js&quot;); 
+
+var namespacePrefix = &quot;{!$Setup.loan__Org_Parameters__c.loan__Namespace_Prefix__c}&quot;; 
+if (namespacePrefix != null &amp;&amp; namespacePrefix != &quot;&quot;){ 
+namespacePrefix += &quot;/&quot;; 
+} 
+var className = namespacePrefix + &quot;RegenerateLoanProductAccountingRules&quot;; 
+var methodName = &quot;regenerateLoanProductAccountingRules&quot;; 
+var parameter1 = &apos;{!loan__Loan_Product__c.Id }&apos; 
+var retVal = sforce.apex.execute(className ,methodName, {loanproductId:parameter1}); 
+window.alert(retVal); 
+window.location.reload();</url>
+    </webLinks>
+</CustomObject>

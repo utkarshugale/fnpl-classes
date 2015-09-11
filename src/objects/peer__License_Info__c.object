@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Protected</customSettingsVisibility>
+    <description>This is mapped with License Custom Field</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>peer__Internal_Organization_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>internal organization name to be mapped with actual organization nsmr</description>
+        <externalId>false</externalId>
+        <label>Internal Organization Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Market_Place_Auto_Renew__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Market Place Auto Renew</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>peer__Market_Place_Expiration_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Market Place Expiration Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>peer__Notify_Auto_Renew__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Notify Auto Renew</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>peer__Notify_Expiration_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>expiration date of the notify license</description>
+        <externalId>false</externalId>
+        <label>Notify Expiration Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>peer__Organization_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Id representing the organization to which the license belongs</description>
+        <externalId>false</externalId>
+        <label>Organization Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>License Info</label>
+</CustomObject>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Business_Event__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Business Event</label>
+        <referenceTo>loan__Business_Event__c</referenceTo>
+        <relationshipLabel>Loan Product Accounting Setup</relationshipLabel>
+        <relationshipName>Loan_Product_Accounting_Setup</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Default_Rule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Default Rule</label>
+        <referenceTo>loan__Accounting_Rule_Header__c</referenceTo>
+        <relationshipLabel>Loan Product Accounting Setup (Default Rule)</relationshipLabel>
+        <relationshipName>Loan_Product_Accounting_Setup1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Product__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Loan Product</label>
+        <referenceTo>loan__Loan_Product__c</referenceTo>
+        <relationshipLabel>Loan Product Accounting Setup</relationshipLabel>
+        <relationshipName>Loan_Product_Accounting_Setup</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Use_Default_Setup__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Use Default Setup</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__User_Defined_Rule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>User Defined Rule</label>
+        <referenceTo>loan__Accounting_Rule_Header__c</referenceTo>
+        <relationshipLabel>Loan Product Accounting Setup</relationshipLabel>
+        <relationshipName>Loan_Product_Accounting_Setup</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Loan Product Accounting Setup</label>
+    <nameField>
+        <displayFormat>LPASID-{00000}</displayFormat>
+        <label>Loan Product Accounting Setup ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Loan Product Accounting Setup</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>loan__Business_Event__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>loan__Use_Default_Setup__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>loan__Default_Rule__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>loan__User_Defined_Rule__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Business_Event__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Use_Default_Setup__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Default_Rule__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__User_Defined_Rule__c</lookupPhoneDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>loan__DefaultOrUserDefinedValidation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (loan__Use_Default_Setup__c, NOT(ISBLANK(loan__User_Defined_Rule__c)))</errorConditionFormula>
+        <errorMessage>Please uncheck &apos;Default Setup&apos; if you wish to use a user defined rule.</errorMessage>
+    </validationRules>
+</CustomObject>

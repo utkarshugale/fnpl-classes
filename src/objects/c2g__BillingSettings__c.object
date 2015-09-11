@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>Extension Settings in general including Billing and Payable Extension</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>c2g__DisableTriggers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Disable the FFA Billing Triggers. Select if the Billing Extension is to be used instead.</description>
+        <externalId>false</externalId>
+        <label>DisableTriggers</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>c2g__HeaderExpanded__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show Header details on Manage lines as expanded by default</description>
+        <externalId>false</externalId>
+        <label>Header Expanded</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>c2g__StopUsingAPExtensionPackage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Stop Using AP Extension Package</description>
+        <externalId>false</externalId>
+        <label>Stop Using AP Extension Package</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>c2g__UseAPExtensionPackageFields__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Use AP Extension Package Fields</description>
+        <externalId>false</externalId>
+        <label>Use AP Extension Package Fields</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Extension Settings (FF)</label>
+</CustomObject>

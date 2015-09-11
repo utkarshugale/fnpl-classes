@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Fee_Set__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Fee Set</label>
+        <referenceTo>loan__Fee_Set__c</referenceTo>
+        <relationshipName>Fee_Junction</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Fee__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Fee</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>loan__Fee__c.loan__Time_of_charge__c</field>
+                <operation>notEqual</operation>
+                <value>Pre-Paid Fees</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__Fee__c</referenceTo>
+        <relationshipLabel>Fee Set/Fee</relationshipLabel>
+        <relationshipName>Fee_Junction</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Fee Set/Fee</label>
+    <nameField>
+        <displayFormat>FJIP-{0000000000}</displayFormat>
+        <label>Fee Junction ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Fee Set/Fee</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>loan__Fee__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>loan__Fee_Set__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Fee__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Fee_Set__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>loan__Fee__c</searchFilterFields>
+        <searchFilterFields>loan__Fee_Set__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>loan__Check_Fee_Category</fullName>
+        <active>true</active>
+        <errorConditionFormula>TEXT(loan__Fee__r.loan__Fee_Category__c) !=  TEXT(loan__Fee_Set__r.loan__Fee_Set_Category__c)</errorConditionFormula>
+        <errorMessage>Fee Category does not match.</errorMessage>
+    </validationRules>
+</CustomObject>

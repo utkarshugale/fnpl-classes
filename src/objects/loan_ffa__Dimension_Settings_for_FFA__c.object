@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>loan_ffa__Stamp_Dimensions_On_Bank_Line__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked when dimensions are to be stamped on Bank line</inlineHelpText>
+        <label>Stamp Dimensions On Bank Line</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Stamp_Dimensions_On_Ledger_Line__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked when dimensions are to be stamped on the Ledger Line Item</inlineHelpText>
+        <label>Stamp Dimensions On Ledger Line</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Use_Dimensions_for_DishonorFeeBatchJob__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Check when Journals with Dimensions are to be created for Dishonour Fee.</inlineHelpText>
+        <label>Use Dimensions for DishonorFeeBatchJob</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Use_Dimensions_for_DishonorFeeReversal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Use Dimensions for DishonorFeeReversal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Use_Dimensions_for_LateFeeBatchJob__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Check when Journals with Dimensions are to be created for Late Fee.</inlineHelpText>
+        <label>Use Dimensions for LateFeeBatchJob</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Use_Dimensions_for_LateFeeReversalJob__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked when dimensions are to be stamped on Late fee reversal Journal.</inlineHelpText>
+        <label>Use Dimensions for LateFeeReversalJob</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Use_Dimensions_for_OrigFeeReversalBatch__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked when the Origination Fee Reversal Journal is to be created with Dimensions</inlineHelpText>
+        <label>Use Dimensions for OrigFeeReversalBatch</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Use_Dimensions_for_OriginationFeeBatch__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Check when Journals with Dimensions are to be created for Origination Fee.</inlineHelpText>
+        <label>Use Dimensions for OriginationFeeBatch</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Use_Dimensions_for_ServiceFeeBatchJob__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Check when Journals with Dimensions are to be created for Service Fee.</inlineHelpText>
+        <label>Use Dimensions for ServiceFeeBatchJob</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Use_Dimensions_for_ServiceFeeReversalJob__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked if Dimensions are to be stamped on Service Fee Reversal Journal</inlineHelpText>
+        <label>Use Dimensions for ServiceFeeReversalJob</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Dimension Settings for FFA</label>
+</CustomObject>

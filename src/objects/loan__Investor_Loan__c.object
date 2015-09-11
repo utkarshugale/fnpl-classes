@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This is a conjunction object to keep many to many relationships for loans and accounts (Investor)</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Account__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This will be look up from Account</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Only investors should be selected.</errorMessage>
+            <filterItems>
+                <field>Account.loan__Investor__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Investment Orders</relationshipLabel>
+        <relationshipName>Investors_Loans</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Approval_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Approval Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Certificate_Rate__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The certificate rate for this investment. This is the rate which will be payable to the investor who buys invested in this loan and is entitled to its receivable stream.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the rate of Interest earned by the investor.</inlineHelpText>
+        <label>Certificate Rate</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Charged_Off_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Datetime when IO is written off.</description>
+        <externalId>false</externalId>
+        <label>Charged Off Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Charged_Off_Fees__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Due fee will be stored in this field when IO is written off.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If the loan is not repaid and the concerned Financial Institution decides to write off or charge off the loan, the snapshot of Fee is stored here.</inlineHelpText>
+        <label>Charged Off Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Charged_Off_Interest__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Accrued Interest will go into Charged Off Interest</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If the loan is not repaid and the concerned Financial Institution decides to write off or charge off the loan, the snapshot of Interest is stored here.</inlineHelpText>
+        <label>Charged Off Interest</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Charged_Off_Principal__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When IO is written off Remaining Investment Amount goes into this.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If the loan is not repaid and the concerned Financial Institution decides to write off or charge off the loan, the snapshot of Principal is stored here.</inlineHelpText>
+        <label>Charged Off Principal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Enabled_Flag__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Shows if the record is enabled.</description>
+        <externalId>false</externalId>
+        <label>Enabled</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Income_Reinvested__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>loan__Interest_Reinvested__c -  loan__Reinvest_Service_Charge__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Income Reinvested</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Amount_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Interest Amount paid on this investment.</description>
+        <externalId>false</externalId>
+        <label>Interest Amount Paid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Balance__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>loan__Inv_Interest_Posted_Amt__c -  loan__Interest_Amount_Paid__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Interest Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Disbursed_To_Investor__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Interest Disbursed (To Investor)</label>
+        <summarizedField>loan__Investor_Loan_Account_Txns__c.loan__Interest_Paid__c</summarizedField>
+        <summaryFilterItems>
+            <field>loan__Investor_Loan_Account_Txns__c.loan__Txn_Code__c</field>
+            <operation>equals</operation>
+            <value>PAYMENT RELEASE, PRINCIPAL REINVESTED</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>loan__Investor_Loan_Account_Txns__c.loan__Reinvest_Interest__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </summaryFilterItems>
+        <summaryForeignKey>loan__Investor_Loan_Account_Txns__c.loan__Investor_Loan__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Rate_On_Loan_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Interest Rate On Loan account</description>
+        <externalId>false</externalId>
+        <label>Interest Rate On Loan</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Reinvested__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Interest Reinvested No Service</label>
+        <summarizedField>loan__Investor_Loan_Account_Txns__c.loan__Interest_Paid__c</summarizedField>
+        <summaryFilterItems>
+            <field>loan__Investor_Loan_Account_Txns__c.loan__Reinvest_Interest__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>loan__Investor_Loan_Account_Txns__c.loan__Txn_Code__c</field>
+            <operation>equals</operation>
+            <value>INTEREST REINVESTED, PRINCIPAL &amp; INTEREST REINVESTED</value>
+        </summaryFilterItems>
+        <summaryForeignKey>loan__Investor_Loan_Account_Txns__c.loan__Investor_Loan__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>loan__Inv_Accrued_Interest_Amt__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Payable Accrued Interest amount to investor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the accrued Interest amount payable to the investor</inlineHelpText>
+        <label>Accrued Interest</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Inv_Interest_Posted_Amt__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Interest Posted on account, this will be updated when the payment amount is being calculated.</description>
+        <externalId>false</externalId>
+        <label>Interest Posted</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Inv_Last_Interest_Accrual_Post_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Last Interest accrual Posted</description>
+        <externalId>false</externalId>
+        <label>Last Interest Accrual Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Investment_Amount__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Investment Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Investor_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Investor_Loan_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <displayFormat>ILID-{0000000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Investor Loan ID ( Deprecated )</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>loan__Investor_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Start date of the Investor</description>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Late_Fees_Amount_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Fees Paid on this account.</description>
+        <externalId>false</externalId>
+        <label>Fees Amount Paid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Delinquent_Days__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number_of_Days_Overdue__c on loan account</description>
+        <externalId>false</externalId>
+        <label>Created Loan Delinquent Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Principal_Remaining__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Created Loan Principal Remaining</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>loan__Loan__r.loan__Disbursal_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Loan Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Loan_Status__c on loan account</description>
+        <externalId>false</externalId>
+        <label>Created Loan Status</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>This is a look up value from Loan</description>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>loan__Loan_Account__c.loan__Loan_Status__c</field>
+                <operation>notContain</operation>
+                <value>Pending Approval, Approved, Canceled, Partial Application</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__Loan_Account__c</referenceTo>
+        <relationshipLabel>Investment Orders</relationshipLabel>
+        <relationshipName>Investors_Loans</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Minimum_Service_Fee__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Minimum Service Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Original_Loan_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>loan__Loan__r.loan__Loan_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Actual Loan amount.</inlineHelpText>
+        <label>Original Loan Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Principal_Amount_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Principal Amount Paid back to Investor.</description>
+        <externalId>false</externalId>
+        <label>Principal Amount Paid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Principal_Disbursed_To_Investor__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Principal Disbursed (To Investor)</label>
+        <summarizedField>loan__Investor_Loan_Account_Txns__c.loan__Principal_Paid__c</summarizedField>
+        <summaryFilterItems>
+            <field>loan__Investor_Loan_Account_Txns__c.loan__Txn_Code__c</field>
+            <operation>equals</operation>
+            <value>PAYMENT RELEASE, INTEREST REINVESTED</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>loan__Investor_Loan_Account_Txns__c.loan__Reinvest_Principal__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </summaryFilterItems>
+        <summaryForeignKey>loan__Investor_Loan_Account_Txns__c.loan__Investor_Loan__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>loan__Principal_Reinvested__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Principal Reinvested</label>
+        <summarizedField>loan__Investor_Loan_Account_Txns__c.loan__Principal_Paid__c</summarizedField>
+        <summaryFilterItems>
+            <field>loan__Investor_Loan_Account_Txns__c.loan__Reinvest_Principal__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>loan__Investor_Loan_Account_Txns__c.loan__Txn_Code__c</field>
+            <operation>equals</operation>
+            <value>PRINCIPAL REINVESTED, PRINCIPAL &amp; INTEREST REINVESTED</value>
+        </summaryFilterItems>
+        <summaryForeignKey>loan__Investor_Loan_Account_Txns__c.loan__Investor_Loan__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>loan__Reinvest_Interest__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Determines if Interest should be reinvested or not when Investor Payout is done.</description>
+        <externalId>false</externalId>
+        <label>Reinvest Interest</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Reinvest_Principal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Determines if principal should be reinvested or not when Investor payout is done.</description>
+        <externalId>false</externalId>
+        <label>Reinvest Principal</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Reinvest_Service_Charge__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This field stores the total service charge for reinvested transactions.</inlineHelpText>
+        <label>Reinvest Service Charge</label>
+        <summarizedField>loan__Investor_Loan_Account_Txns__c.loan__Total_Service_Charge__c</summarizedField>
+        <summaryFilterItems>
+            <field>loan__Investor_Loan_Account_Txns__c.loan__Reinvest_Interest__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>loan__Investor_Loan_Account_Txns__c.loan__Txn_Code__c</field>
+            <operation>equals</operation>
+            <value>INTEREST REINVESTED, PRINCIPAL &amp; INTEREST REINVESTED</value>
+        </summaryFilterItems>
+        <summaryForeignKey>loan__Investor_Loan_Account_Txns__c.loan__Investor_Loan__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>loan__Remaining_Investment_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <description>shows remaining investment amount for investment order.</description>
+        <externalId>false</externalId>
+        <formula>loan__Investment_Amount__c -  loan__Principal_Amount_Paid__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Remaining Investment Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Service_Charge_On_Full_Payment_Amount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Charge On Full Payment Amount</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Service_Rate__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>On this rate service charge will be charged to the investors for servicing loans, making note payments and maintaining the accounts.
+The service charge paid by investors is on all amounts paid by the borrowers.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is the %age of the certificate rate which is earned by the P2P platform.</inlineHelpText>
+        <label>Interest Service Rate</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Share__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Describes the percent share of Investor in Loan amount</description>
+        <externalId>false</externalId>
+        <label>Share</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>7</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Share_rounded__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>loan__Share__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Share</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Describes whether the record is in Active or Inactive state</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed - Written Off</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Total_Amount_Paid__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Total Amount paid back to Investor</description>
+        <externalId>false</externalId>
+        <label>Total Amount Paid</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Unreleased_Interest__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field calculates unreleased Interest.</description>
+        <externalId>false</externalId>
+        <formula>loan__Interest_Amount_Paid__c -  loan__Interest_Disbursed_To_Investor__c -  loan__Interest_Reinvested__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Field calculates unreleased Interest.</inlineHelpText>
+        <label>Unreleased Interest</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Unreleased_Principal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Fields calculates Unreleased principal for investment order.</description>
+        <externalId>false</externalId>
+        <formula>loan__Principal_Amount_Paid__c -  loan__Principal_Disbursed_To_Investor__c -  loan__Principal_Reinvested__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Fields calculates Unreleased principal for investment order.</inlineHelpText>
+        <label>Unreleased Principal</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Write_Off_Amount__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Amount which is written off for investment order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount to write off from Investment order.</inlineHelpText>
+        <label>Write Off Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Investment_Booking__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Investment Booking</label>
+        <referenceTo>peer__Investment_Booking__c</referenceTo>
+        <relationshipLabel>Investment Orders</relationshipLabel>
+        <relationshipName>Investment_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>peer__Number_of_Shares__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>loan__Investment_Amount__c  /  loan__Loan__r.peer__Note_Type__r.peer__Denomination__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of Shares</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Purchase_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Purchase Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Sale_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Date on which selling of investment order took place</inlineHelpText>
+        <label>Sale Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Investment Order</label>
+    <nameField>
+        <displayFormat>ILID-{0000000000}</displayFormat>
+        <label>Investor Loan ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Investment Orders</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>loan__Available_Funds_check</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNEW() &amp;&amp; loan__Investment_Amount__c &gt; loan__Account__r.loan__Undeployed_Funds__c</errorConditionFormula>
+        <errorMessage>Investor can not invest more than Available Funds.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>loan__De_Activate_Investment</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>De-Activate Investment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+var retVal = sforce.apex.execute(&quot;loan/DeactivateInvestmentOrder&quot;,&quot;deactivate&quot;, {invOrderId:&quot;{! loan__Investor_Loan__c.Id }&quot;}); 
+window.alert(retVal);
+window.location.reload();</url>
+    </webLinks>
+    <webLinks>
+        <fullName>loan__Investment_Order_Maintenance</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Investment Order Maintenance</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/loan__investmentOrderMaintenance?loanAccountId={!loan__Loan_Account__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>loan__New_Investor</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Investment Order Initial Setup</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/loan__investmentOrderInitialSetup?loanAccountId={!loan__Loan_Account__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>peer__Sale</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>page</linkType>
+        <masterLabel>Sell</masterLabel>
+        <openType>newWindow</openType>
+        <page>peer__ioSale</page>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+    </webLinks>
+</CustomObject>

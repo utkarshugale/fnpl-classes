@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>c2g__codahelpintercompanydefinition</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Defines the intercompany control accounts that you want to use when generating and posting  intercompany journals.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>c2g__DestinationDimension1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Destination Dimension 1</label>
+        <referenceTo>c2g__codaDimension1__c</referenceTo>
+        <relationshipLabel>Intercompany Definitions (Destination Dimension 1)</relationshipLabel>
+        <relationshipName>IntercompanyDefinitions1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__DestinationDimension2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Destination Dimension 2</label>
+        <referenceTo>c2g__codaDimension2__c</referenceTo>
+        <relationshipLabel>Intercompany Definitions (Destination Dimension 2)</relationshipLabel>
+        <relationshipName>IntercompanyDefinitions1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__DestinationDimension3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Destination Dimension 3</label>
+        <referenceTo>c2g__codaDimension3__c</referenceTo>
+        <relationshipLabel>Intercompany Definitions (Destination Dimension 3)</relationshipLabel>
+        <relationshipName>IntercompanyDefinitions1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__DestinationDimension4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Destination Dimension 4</label>
+        <referenceTo>c2g__codaDimension4__c</referenceTo>
+        <relationshipLabel>Intercompany Definitions (Destination Dimension 4)</relationshipLabel>
+        <relationshipName>IntercompanyDefinitions1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__ExternalId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__OwnerCompany__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <referenceTo>c2g__codaCompany__c</referenceTo>
+        <relationshipLabel>Intercompany Definitions</relationshipLabel>
+        <relationshipName>IntercompanyDefinitions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__ReceivingControlAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Accounts Payable GLA</label>
+        <referenceTo>c2g__codaGeneralLedgerAccount__c</referenceTo>
+        <relationshipName>Intercompany</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__RelatedCompany__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Related Company</label>
+        <referenceTo>c2g__codaCompany__c</referenceTo>
+        <relationshipLabel>Intercompany Definitions (Related Company)</relationshipLabel>
+        <relationshipName>IntercompanyDefinitionsRelatedCompany</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__SendingControlAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Accounts Receivable GLA</label>
+        <referenceTo>c2g__codaGeneralLedgerAccount__c</referenceTo>
+        <relationshipName>Intercompany1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__SourceDimension1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Source Dimension 1</label>
+        <referenceTo>c2g__codaDimension1__c</referenceTo>
+        <relationshipLabel>Intercompany Definitions (Source Dimension 1)</relationshipLabel>
+        <relationshipName>IntercompanyDefinitions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__SourceDimension2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Source Dimension 2</label>
+        <referenceTo>c2g__codaDimension2__c</referenceTo>
+        <relationshipLabel>Intercompany Definitions (Source Dimension 2)</relationshipLabel>
+        <relationshipName>IntercompanyDefinitions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__SourceDimension3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Source Dimension 3</label>
+        <referenceTo>c2g__codaDimension3__c</referenceTo>
+        <relationshipLabel>Intercompany Definitions (Source Dimension 3)</relationshipLabel>
+        <relationshipName>IntercompanyDefinitions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__SourceDimension4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Source Dimension 4</label>
+        <referenceTo>c2g__codaDimension4__c</referenceTo>
+        <relationshipLabel>Intercompany Definitions (Source Dimension 4)</relationshipLabel>
+        <relationshipName>IntercompanyDefinitions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__UnitOfWork__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Unit of Work</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Intercompany Definition</label>
+    <listViews>
+        <fullName>FF_Fly_Now_Pay_Later_Limited_06936813_codaIntercompanyDefinition</fullName>
+        <filterScope>Queue</filterScope>
+        <label>FF Fly Now Pay Later Limited (06936813)</label>
+        <queue>FF_Fly_Now_Pay_Later_Limited_06936813</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>FF_Travelfund_Limited_codaIntercompanyDefinition</fullName>
+        <filterScope>Queue</filterScope>
+        <label>FF Travelfund Limited</label>
+        <queue>FF_Travelfund_Limited</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>FF_Travelfund_co_uk_Limited_codaIntercompanyDefinition</fullName>
+        <filterScope>Queue</filterScope>
+        <label>FF Travelfund.co.uk Limited</label>
+        <queue>FF_Travelfund_co_uk_Limited</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>c2g__All</fullName>
+        <columns>NAME</columns>
+        <columns>c2g__OwnerCompany__c</columns>
+        <columns>c2g__RelatedCompany__c</columns>
+        <columns>c2g__ReceivingControlAccount__c</columns>
+        <columns>c2g__SendingControlAccount__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>ICD{000000}</displayFormat>
+        <label>Intercompany Definition Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Intercompany Definitions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

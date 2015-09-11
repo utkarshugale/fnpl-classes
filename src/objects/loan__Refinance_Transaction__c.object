@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Refinance Transactions (Account)</relationshipLabel>
+        <relationshipName>Refinance_Txn_Account</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Actual_Refinance_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Payoff Amount of the Refinanced Loan</inlineHelpText>
+        <label>Actual Refinance Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Refinance Transactions (Contact)</relationshipLabel>
+        <relationshipName>Refinance_Txn_Contact</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Expected_Refinance_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Expected Payoff Amount of the Refinanced Loan at the time of Refinance Transaction creation</inlineHelpText>
+        <label>Expected Refinance Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Loan Account</label>
+        <referenceTo>loan__Loan_Account__c</referenceTo>
+        <relationshipLabel>Contracts Refinanced</relationshipLabel>
+        <relationshipName>Refinance_Txn_Loan_Account</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Disbursal_Transaction__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Settled in this Disbursal Transaction</inlineHelpText>
+        <label>Disbursal Transaction</label>
+        <referenceTo>loan__Loan_Disbursal_Transaction__c</referenceTo>
+        <relationshipLabel>Refinance Transactions</relationshipLabel>
+        <relationshipName>Refinance_Transaction</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Refinance_Transaction_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Refinance Transaction creation date</inlineHelpText>
+        <label>Transaction Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Refinanced_Loan_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Loan Account (Refinanced)</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>loan__Loan_Account__c.loan__Loan_Status__c</field>
+                <operation>equals</operation>
+                <value>Active - Good Standing, Active - Bad Standing</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__Loan_Account__c</referenceTo>
+        <relationshipLabel>Refinanced To Contract</relationshipLabel>
+        <relationshipName>Refinanced_Loan_Account</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Refinanced_Loan_Current_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(loan__Refinanced_Loan_Account__r.loan__Loan_Status__c)</formula>
+        <inlineHelpText>Current Status of Refinanced Loan Account</inlineHelpText>
+        <label>Current Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Settled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Ticked, when the pay-off transaction of refinanced loan account is cleared</inlineHelpText>
+        <label>Settled</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Loan Refinance Transaction</label>
+    <nameField>
+        <displayFormat>RTID-{00000000}</displayFormat>
+        <label>Refinance Transaction ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Loan Refinance Transactions</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>loan__Loan_Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>loan__Refinanced_Loan_Account__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>loan__Refinance_Contract_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Refinanced_Loan_Account__c == null</errorConditionFormula>
+        <errorMessage>Loan Account (to be Refinanced) cannot be null.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Transaction_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Refinance_Transaction_Date__c == null</errorConditionFormula>
+        <errorMessage>Transaction date cannot be null.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>loan__Pay_Off_Refinanced_Loan</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Pay Off Refinanced Loan</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/loan__loanPayoffTxn?Id={!loan__Refinance_Transaction__c.loan__Refinanced_Loan_AccountId__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>loan__Settle_Transaction</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Settle Transaction</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+var namespacePrefix = &quot;{!$Setup.loan__Org_Parameters__c.loan__Namespace_Prefix__c}&quot;;
+if (namespacePrefix != null &amp;&amp; namespacePrefix != &quot;&quot;){
+    namespacePrefix += &quot;/&quot;;
+}
+var className = namespacePrefix + &quot;LoanRefinanceAction&quot;;
+var methodName = &quot;settleRefinanceTxnFromUI&quot;;
+var parameter1 = &quot;{!loan__Refinance_Transaction__c.Id}&quot;;
+var retVal = sforce.apex.execute(className, methodName, {refinTxnId:parameter1});
+window.alert(retVal);
+window.location.reload();</url>
+    </webLinks>
+</CustomObject>

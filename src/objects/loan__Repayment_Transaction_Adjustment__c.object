@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Repayment Transaction Adjustment Object</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Attempt_Retry__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Should System attempt retry for this ? Retry attempt is made after 7 days.</inlineHelpText>
+        <label>Attempt Retry</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Process_Refund__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Process Refund</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Adjusted_Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Adjusted Amount (+ve or -ve). This is not yet implemented. 
+Reversal Txn will reverse the master payment transaction&apos;s full amount.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Adjusted Amount (+ve or -ve). This is not yet implemented. 
+Reversal Txn will reverse the master payment transaction&apos;s full amount.</inlineHelpText>
+        <label>Adjusted Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Adjustment_Txn_Date__c</fullName>
+        <defaultValue>$User.loan__Current_Branch_s_System_Date__c</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Adjustment Txn Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Adjustment Txn Date</inlineHelpText>
+        <label>Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Cleared__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cleared</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Custom_Logic__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Custom Funding Logic</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Payment_Transaction__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Loan Payment Transaction</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Loan Payment Transaction</inlineHelpText>
+        <label>Loan Payment Transaction</label>
+        <referenceTo>loan__Loan_Payment_Transaction__c</referenceTo>
+        <relationshipName>Repayment_Transaction_Adjustment</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Reason_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reason Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NSF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Human Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Receipt_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <displayFormat>RATID-{0000000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Receipt ID</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>loan__Reference__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reference</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Rejected__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rejected</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Signed_Adjusted_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>loan__Loan_Payment_Transaction__r.loan__Transaction_Amount__c * -1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Signed Adjusted Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Repayment Transaction Reversal</label>
+    <nameField>
+        <displayFormat>RTA-{0000000000}</displayFormat>
+        <label>Repayment Transaction Adjustment ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Repayment Transaction Reversal</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>loan__Check_Clear_Flag</fullName>
+        <active>true</active>
+        <errorConditionFormula>(loan__Loan_Payment_Transaction__r.loan__Cleared__c == false &amp;&amp; loan__Loan_Payment_Transaction__r.loan__Rejected__c == false) ||  loan__Loan_Payment_Transaction__r.loan__Rejected__c == true</errorConditionFormula>
+        <errorMessage>An uncleared or rejected payment transaction cannot be reversed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Existing_Reversal_Txn</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNEW() &amp;&amp;  loan__Loan_Payment_Transaction__r.loan__Cleared_Reversal_Txn_Count__c &gt; 0</errorConditionFormula>
+        <errorMessage>This repayment transaction has already been reversed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_for_Suspension</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Loan_Payment_Transaction__r.loan__Loan_Account__r.loan__Suspended__c == true</errorConditionFormula>
+        <errorMessage>Unsupported operation - You cannot pass a reversal transaction on a suspended account.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Transaction_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Adjustment_Txn_Date__c &gt; TODAY()</errorConditionFormula>
+        <errorMessage>Transaction date cannot be greater than calendar date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Validate_Txn_Date_Against_System_Date</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( $User.loan__Current_System_Date__c != null,
+$User.loan__Current_System_Date__c !=  loan__Adjustment_Txn_Date__c )</errorConditionFormula>
+        <errorMessage>Transaction Date must be the same as system date.</errorMessage>
+    </validationRules>
+</CustomObject>

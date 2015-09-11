@@ -36,6 +36,11 @@ global class WSLocAccounts_v2 {
         String partnerId;
         Boolean ach = false;
         Boolean isProductB = false;
+        Decimal loanApr;
+        Decimal interestRatePM;
+        Decimal creditScore;
+        String creditScoreType;
+        
         b = new BorrowerImpl();
         
         try {
@@ -51,8 +56,8 @@ global class WSLocAccounts_v2 {
             if (params.get('term') != null) {
                 term = (Integer)params.get('term');
             }
-            if(params.get('interestRate') != null) {
-                interestRate = (Decimal)params.get('interestRate');
+            if(params.get('interestRatePA') != null) {
+                interestRate = (Decimal)params.get('interestRatePA');
             }
             if(params.get('purpose') != null) {
                purpose = (String)params.get('purpose');                
@@ -75,6 +80,18 @@ global class WSLocAccounts_v2 {
             system.debug('*****PartnerId'+(String)params.get('partnerId'));
             if(params.get('partnerId') != null) {
                 partnerId = (String)params.get('partnerId');
+            }
+            if(params.get('loanApr') != null) {
+                loanApr = (Decimal)params.get('loanApr');
+            }
+            if(params.get('interestRatePM') != null) {
+                interestRatePM = (Decimal)params.get('interestRatePM');
+            }
+            if(params.get('creditScore') != null) {
+                creditScore = (Decimal)params.get('creditScore');
+            }
+            if(params.get('creditScoreType') != null) {
+                creditScoreType = (String)params.get('creditScoreType');
             }
             
         } catch(Exception e) {
@@ -174,7 +191,7 @@ global class WSLocAccounts_v2 {
             lA = b.createLocAccount(Id.valueOf(borrowerId),lp.Id, loanAmount, term, interestRate, 'Holiday', 
                                         disbursalDate,
                                         firstInstallmentDate, 'Monthly',0, 
-                                        0,ach, bankId);
+                                        0,ach, bankId,interestRatePM,loanApr,creditScore,creditScoreType);
             
             insert lA;
             

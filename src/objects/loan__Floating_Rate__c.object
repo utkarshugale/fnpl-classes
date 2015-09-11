@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Floating Rates of Floating Rate Indexes</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Tick to activate the Floating Rate</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Floating_Rate_Index__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Floating Rate Index Type</inlineHelpText>
+        <label>Floating Rate Index</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>loan__Floating_Rate_Index__c.loan__Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__Floating_Rate_Index__c</referenceTo>
+        <relationshipLabel>Floating Rates</relationshipLabel>
+        <relationshipName>Floating_Rates</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Rate_Effective_From__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Rate effecivity starts from &apos;Effective From&apos; date</inlineHelpText>
+        <label>Effective From</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Rate_Effective_To__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Rate effectivity ends on &apos;Effective To&apos; date</inlineHelpText>
+        <label>Effective To</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Rate_Percentage__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Rate Percenatge</inlineHelpText>
+        <label>Rate Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>loan__Reset_Process_End_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Reset Process Job End Date &amp; Time</inlineHelpText>
+        <label>Reset Process End Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>loan__Reset_Process_Job_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of the Reset Process Job</inlineHelpText>
+        <label>Reset Process Job Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Reset_Process_Start_Time__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Reset Process Job Start Date &amp; Time</inlineHelpText>
+        <label>Reset Process Start Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>loan__Reset_Process_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of the Reset Process Job</inlineHelpText>
+        <label>Reset Process Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aborted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Floating Rate</label>
+    <nameField>
+        <displayFormat>FR-{000000}</displayFormat>
+        <label>Floating Rate ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Floating Rates</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>loan__Floating_Rate_Index__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>loan__Rate_Percentage__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>loan__Rate_Effective_From__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Floating_Rate_Index__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Rate_Percentage__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Rate_Effective_From__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>loan__Floating_Rate_Index__c</searchFilterFields>
+        <searchFilterFields>loan__Rate_Percentage__c</searchFilterFields>
+        <searchFilterFields>loan__Rate_Effective_From__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>loan__Effective_Dates_Check</fullName>
+        <active>true</active>
+        <description>Effective To (if populated) should be greater than the Effective From</description>
+        <errorConditionFormula>AND( NOT( ISBLANK( loan__Rate_Effective_To__c ) ) ,  loan__Rate_Effective_To__c  &lt;  loan__Rate_Effective_From__c )</errorConditionFormula>
+        <errorMessage>Effective To date should be equal to or greater than the Effective From date.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>loan__Submit_Reset_Process</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Submit Reset Process</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+var namespacePrefix = &quot;{!$Setup.loan__Org_Parameters__c.loan__Namespace_Prefix__c}&quot;; 
+if (namespacePrefix != null &amp;&amp; namespacePrefix != &quot;&quot;){ 
+namespacePrefix += &quot;/&quot;; 
+} 
+var className = namespacePrefix + &quot;FloatingRateResetProcessCtrl&quot;; 
+var methodName = &quot;submitJob&quot;; 
+var parameter1 = &quot;{!loan__Floating_Rate__c.Id}&quot;; 
+var retVal = sforce.apex.execute(className, methodName, {floatingRateId:parameter1}); 
+window.alert(retVal); 
+window.location.reload();</url>
+    </webLinks>
+</CustomObject>

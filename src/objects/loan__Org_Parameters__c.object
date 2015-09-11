@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>loan__Adjust_Rounding_in_last_Payment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this is checked then we do the rounding off the payment amount and the last principal/interest due amount will be adjusted.</inlineHelpText>
+        <label>Adjust Rounding in last Payment</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Applet_Jars_Location__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This field stores the URL for Biometric JAR file used for the purpose of development and testing.</inlineHelpText>
+        <label>Applet Jars Location</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>loan__Batch_size_for_daily_jobs__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Batch size for daily jobs</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Biometric_DB_Connection__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is used to provide the path for JAR files</inlineHelpText>
+        <label>Biometric DB Connection</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>loan__Check_Teller_Balance_before_EOD__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Check Teller Balance before EOD</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Custom_Fee_Calculator_Class__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Here, you can provide the name of the class to calculate custom fees</inlineHelpText>
+        <label>Custom Fee Calculator Class</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Default_Tolerance_Rate__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Organization wide tolerance value for payments.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Organization wide tolerance value for loan repayments.</inlineHelpText>
+        <label>Default Tolerance Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Digits_After_Decimals__c</fullName>
+        <defaultValue>2</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Digits are decimals for rounding.</inlineHelpText>
+        <label>Digits After Decimals</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Disable_Rounding_In_Amz_Schedule__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this is checked then there will not any any rounding in amz schedule.
+All the interest and payment amount will be saved as un rounded one.</inlineHelpText>
+        <label>Disable Rounding In Amz Schedule</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Disable_Triggers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This disables all the triggers. It is to be used only while migrating data into the system. It must be disabled otherwise.</inlineHelpText>
+        <label>Disable Triggers</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Draw_Amortization_Schedule__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this is checked then at rescheduling amortization schedule will be drawn</inlineHelpText>
+        <label>Draw Amortization Schedule</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Enable_Bank_Trust_Account_Validation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If this validation is true then you cannot create more than one Bank Trust Account.</description>
+        <externalId>false</externalId>
+        <label>Enable Bank Trust Account Validation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Enable_Fractionalization__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is used to display the Investors tab on a loan application, thus enabling Fractionalization</inlineHelpText>
+        <label>Enable Fractionalization</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Enable_Griaule_Biometrics__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this is checked, you can register the fingerprint with a biometric device.</inlineHelpText>
+        <label>Enable Griaule Biometrics</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Enable_M2SYS_Biometrics__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this is checked, you can register the fingerprint with a biometric device</inlineHelpText>
+        <label>Enable M2SYS Biometrics</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Enable_Teller_Management__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this is checked, the system will consider teller management when accounting entries are created. Each user must be assigned one General ledger ( Teller account ) and IsTeller under user information must be checked.</inlineHelpText>
+        <label>Enable Teller Management</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Final_Payment_Differ__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This works in combination with Adjust rounding in last Pmt parameter.
+If both are checked then rounding is done in last payment by increasing the last payment amount.
+If this is unchecked then all the payments will be equated(even).</inlineHelpText>
+        <label>Final Payment Differ (in Amz Schedule)</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Integrate_Salesforce_CRM__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this is checked,  the standard objects Account and Contacts will be used.</inlineHelpText>
+        <label>Integrate Salesforce CRM</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Interest_Accrual_Thresold_days__c</fullName>
+        <defaultValue>90</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Interest Accrual Threshold days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Log_Level__c</fullName>
+        <defaultValue>&quot;ERROR&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The loggin level of the application. Valid options are:
+DEBUG, ERROR, NONE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The loggin level of the application. Valid options are:
+DEBUG, ERROR, NONE</inlineHelpText>
+        <label>Log Level</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Namespace_Prefix__c</fullName>
+        <defaultValue>&quot;loan&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This is MFiFlex internal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is MFiFlex internal. Do not delete/edit this value.</inlineHelpText>
+        <label>Namespace Prefix</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Production__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Production</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Rounding_Mode__c</fullName>
+        <defaultValue>&apos;NEAREST&apos;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This specifies the rounding behavior for numerical operations capable of discarding precision. Each rounding mode indicates how the least significant returned digit of a rounded result is to be calculated.</inlineHelpText>
+        <label>Rounding Mode</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Shift_Date_Before_Holiday__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>No longer supported.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>No longer supported.</inlineHelpText>
+        <label>Shift Date Before Holiday (Deprecated)</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Skip_Holidays__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>When this value is true, holidays are not included in dates of the amortization schedule and no dues are generated on holidays. This feature is supported only for the contracts with Daily payment frequency.</inlineHelpText>
+        <label>Skip Holidays for Daily Loans</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Statments_Logo_File_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Provide file name of static resource with extension. for ex: .png, .jpeg etc</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the file name for the loan account statement</inlineHelpText>
+        <label>Statements Logo File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Track_Account_History__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Track Account History</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Track_Client_History__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Track Client History</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>peer__Bazaar_Namespace__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Namespace Prefix(Bazaar)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Convert_Country_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Convert Country Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Disable_SMS_Verification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disable SMS Verification</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>peer__Max_SMS__c</fullName>
+        <defaultValue>20</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Max SMS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Max_Sms_Retry_Count__c</fullName>
+        <defaultValue>5</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Max SMS Retry Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__SMS_Send_Time_Limit__c</fullName>
+        <defaultValue>30</defaultValue>
+        <deprecated>false</deprecated>
+        <description>value in minutes past current time ,from which sent sms verification messages are considered. It is used with MAX SMS to restrict the no of sms sent</description>
+        <externalId>false</externalId>
+        <label>SMS Send Time Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__SMS_Timeout__c</fullName>
+        <defaultValue>30</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SMS Timeout</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Org Parameters</label>
+</CustomObject>

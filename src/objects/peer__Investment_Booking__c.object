@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>peer__Bid_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Bid Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>peer__Booking_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Booking Order</label>
+        <referenceTo>peer__Booking_Order__c</referenceTo>
+        <relationshipLabel>Investment Bookings</relationshipLabel>
+        <relationshipName>Investment_Bookings</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>peer__Certificate_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Certificate Rate</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>peer__Investment_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Investment Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Loan_Application__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Loan Application</label>
+        <referenceTo>peer__Loan_Application__c</referenceTo>
+        <relationshipLabel>Investment Bookings</relationshipLabel>
+        <relationshipName>Investment_Bookings</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>peer__Purchase_Price__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Purchase Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Safe_Fund_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Safe Fund Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Service_Rate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Rate</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>peer__Share__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF (ISPICKVAL(peer__Loan_Application__r.peer__Stage__c, &apos;Funded&apos;),
+  peer__Investment_Amount__c / peer__Loan_Application__r.peer__Amount_Funded__c,
+  peer__Investment_Amount__c / peer__Loan_Application__r.peer__Requested_Loan_Amount__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Share</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>peer__Stage_Formula__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(peer__Loan_Application__r.peer__Stage__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stage (Formula)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Stage__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In Funding</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Funded</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Above Threshold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready To Fund</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>peer__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Partially Winning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Winning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Losing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Uncommited</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Investment Booking</label>
+    <nameField>
+        <displayFormat>IB-{00000000}</displayFormat>
+        <label>Investment Booking Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Investment Bookings</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>peer__Amount_should_be_positive</fullName>
+        <active>true</active>
+        <errorConditionFormula>peer__Investment_Amount__c &lt;= 0</errorConditionFormula>
+        <errorMessage>Please enter a positive investment amount.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>peer__Certificate_Rate_Check</fullName>
+        <active>false</active>
+        <errorConditionFormula>peer__Certificate_Rate__c &gt;  peer__Loan_Application__r.peer__Interest_Rate__c</errorConditionFormula>
+        <errorMessage>The certificate rate cannot be greater than the loan application&apos;s interest rate.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>peer__Check_Available_Funds</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNEW() &amp;&amp; (  peer__Booking_Order__r.peer__Investor__r.peer__Funds_Available_For_Investment__c  &lt;  peer__Investment_Amount__c )</errorConditionFormula>
+        <errorMessage>You don&apos;t have enough funds to book an investment.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>peer__Loan_Application_Status_Check</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISNEW() &amp;&amp; NOT(ISPICKVAL(peer__Loan_Application__r.peer__Stage__c,&apos;In Funding&apos;))</errorConditionFormula>
+        <errorMessage>Loan application stage is invalid. Booking can be created only in &apos;In Funding&apos; stage.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>peer__Requested_Amount_check</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISNEW() &amp;&amp;( peer__Loan_Application__r.peer__Requested_Loan_Amount__c -  (peer__Loan_Application__r.peer__Amount_Funded__c +  peer__Loan_Application__r.peer__Amount_In_Funding__c )) &lt;  peer__Investment_Amount__c</errorConditionFormula>
+        <errorMessage>Investment amount can not be greater than requested Loan amount.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>peer__Service_Rate_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>peer__Service_Rate__c &gt; 100</errorConditionFormula>
+        <errorMessage>Service rate cannot be greater than 100%.</errorMessage>
+    </validationRules>
+</CustomObject>

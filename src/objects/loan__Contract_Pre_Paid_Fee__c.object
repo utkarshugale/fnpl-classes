@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This is the junction object on Fee and contract.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Add_Fee_to_Loan_Amount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Add Fee to Loan Amount</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Amortize_Balance__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Amortize Balance</label>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pre-Paid Fees</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Pre Paid Fees Amount</inlineHelpText>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Contract__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <referenceTo>loan__Loan_Account__c</referenceTo>
+        <relationshipLabel>Pre-Paid Fee</relationshipLabel>
+        <relationshipName>Pre_Paid_Fee</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Fee_Type__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Fee</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>loan__Fee__c.loan__Time_of_charge__c</field>
+                <operation>equals</operation>
+                <value>Pre-Paid Fees</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__Fee__c</referenceTo>
+        <relationshipLabel>Pre-Paid Fee</relationshipLabel>
+        <relationshipName>Contract_Pre_Paid_Fee</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Disbursal_Transaction__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Adjusted in this disbursal transaction</inlineHelpText>
+        <label>Disbursal Transaction</label>
+        <referenceTo>loan__Loan_Disbursal_Transaction__c</referenceTo>
+        <relationshipLabel>Pre-Paid Fees</relationshipLabel>
+        <relationshipName>Pre_Paid_Fees</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Pre-Paid Fee</label>
+    <nameField>
+        <displayFormat>CPP-{00000000}</displayFormat>
+        <label>Pre-Paid Fee Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Pre-Paid Fees</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>loan__Fee_Amount_Limit_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(loan__Amount__c &gt; loan__Fee_Type__r.loan__Maximum_Amount__c, loan__Amount__c &lt; loan__Fee_Type__r.loan__Minimum_Amount__c)</errorConditionFormula>
+        <errorMessage>The Pre-Paid Fee Amount should fall between the Limits specified in the Fee setup.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Fee_Amount_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Amount__c &lt; 0</errorConditionFormula>
+        <errorMessage>Pre-Paid Fee Amount should be greater than or equal to 0.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>loan__Populate_Fees</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Populate Fees</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)} 
+var namespacePrefix = &quot;{!$Setup.loan__Org_Parameters__c.loan__Namespace_Prefix__c}&quot;;
+if (namespacePrefix != null &amp;&amp; namespacePrefix != &quot;&quot;){
+    namespacePrefix += &quot;/&quot;;
+}
+var className = namespacePrefix + &quot;PopulatePrePaidFeesOnContractCtrl&quot;;
+var methodName = &quot;PopulatePrePaidFeesOnContract&quot;;
+var parameter1 = &quot;{!loan__Loan_Account__c.Id}&quot;;
+var retVal = sforce.apex.execute(className, methodName, {loanAccId:parameter1});
+window.alert(retVal);
+window.location.reload();</url>
+    </webLinks>
+</CustomObject>

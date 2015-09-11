@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <customHelpPage>c2g__codahelppurchaseinvoice</customHelpPage>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Holds information that applies to the whole payable invoice such as vendor information and due date.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>c2g__HeaderDetailsForManageLines</fullName>
+        <description>Used in the Manage Lines page for header detail</description>
+        <displayedFields>
+            <field>c2g__Account__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>c2g__InvoiceDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>c2g__InvoiceTotal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>c2g__InvoiceCurrency__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Header Details for Manage Lines</label>
+    </fieldSets>
+    <fields>
+        <fullName>c2g__AccountAddress__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>c2g__Account__r.BillingStreet + &apos; &apos; + c2g__Account__r.BillingCity + &apos; &apos; + c2g__Account__r.BillingState + &apos; &apos; + c2g__Account__r.BillingPostalCode + &apos; &apos; + c2g__Account__r.BillingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__AccountECCountryCode__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(c2g__Account__r.c2g__CODAECCountryCode__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tax Country Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__AccountInvoiceNumber__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The vendor reference.</description>
+        <externalId>false</externalId>
+        <label>Vendor Invoice Number</label>
+        <length>24</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Payable Invoices</relationshipLabel>
+        <relationshipName>PurchaseInvoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__CopyAccountValues__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Copy Account Values</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>c2g__DeriveCurrency__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Derive Currency</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>c2g__DeriveDueDate__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Derive Due Date</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>c2g__DerivePeriod__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Derive Period</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>c2g__Dimension1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Dimension 1</label>
+        <referenceTo>c2g__codaDimension1__c</referenceTo>
+        <relationshipLabel>Payable Invoices</relationshipLabel>
+        <relationshipName>PurchaseInvoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__Dimension2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Dimension 2</label>
+        <referenceTo>c2g__codaDimension2__c</referenceTo>
+        <relationshipLabel>Payable Invoices</relationshipLabel>
+        <relationshipName>PurchaseInvoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__Dimension3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Dimension 3</label>
+        <referenceTo>c2g__codaDimension3__c</referenceTo>
+        <relationshipLabel>Payable Invoices</relationshipLabel>
+        <relationshipName>PurchaseInvoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__Dimension4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Dimension 4</label>
+        <referenceTo>c2g__codaDimension4__c</referenceTo>
+        <relationshipLabel>Payable Invoices</relationshipLabel>
+        <relationshipName>PurchaseInvoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__DiscardReason__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The reason this Payable Invoice was discarded.</description>
+        <externalId>false</externalId>
+        <label>Discard Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>c2g__DualRate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The dual to home exchange rate.</description>
+        <externalId>false</externalId>
+        <label>Dual Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>9</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__DueDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date the payable invoice is due for payment.</description>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>c2g__ExpensesNetTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total value of expense items on the invoice, before tax.
+SUM: Payable Invoice Expense Line Item: NetValue</description>
+        <externalId>false</externalId>
+        <label>Expenses Net Total</label>
+        <summarizedField>c2g__codaPurchaseInvoiceExpenseLineItem__c.c2g__NetValue__c</summarizedField>
+        <summaryForeignKey>c2g__codaPurchaseInvoiceExpenseLineItem__c.c2g__PurchaseInvoice__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>c2g__ExpensesTax1Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sum of tax 1 posted to Expense Line Items.</description>
+        <externalId>false</externalId>
+        <label>Expenses Tax 1 Total</label>
+        <summarizedField>c2g__codaPurchaseInvoiceExpenseLineItem__c.c2g__TaxValue1__c</summarizedField>
+        <summaryForeignKey>c2g__codaPurchaseInvoiceExpenseLineItem__c.c2g__PurchaseInvoice__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>c2g__ExpensesTax2Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sum of tax 2 posted to Expense Line Items.</description>
+        <externalId>false</externalId>
+        <label>Expenses Tax 2 Total</label>
+        <summarizedField>c2g__codaPurchaseInvoiceExpenseLineItem__c.c2g__TaxValue2__c</summarizedField>
+        <summaryForeignKey>c2g__codaPurchaseInvoiceExpenseLineItem__c.c2g__PurchaseInvoice__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>c2g__ExternalId__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__HoldStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Hold Status</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__IncomeTaxType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Income Tax Type</description>
+        <externalId>false</externalId>
+        <label>Income Tax Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Rents</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 - Royalties</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 - Other Income</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 - Federal Income Tax Withheld</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 - Fishing Boat Proceeds</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 - Medical and Healthcare Payments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 - Nonemployee Compensation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8 - Substitute Payments in Lieu of Dividends or Interest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 - Payer Made Direct Sales of 5000 or More</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Crop Insurance Proceeds</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11 - Unused 11</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12 - Unused 12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13 - Excess Golden Parachute Payments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>14 - Gross Proceeds Paid to an Attorney</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Reportable</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>c2g__IntercompanyTransfer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Intercompany Transfer</label>
+        <referenceTo>c2g__codaIntercompanyTransfer__c</referenceTo>
+        <relationshipLabel>Payable Invoices</relationshipLabel>
+        <relationshipName>PurchaseInvoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__InvoiceCurrency__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Invoice Currency</label>
+        <referenceTo>c2g__codaAccountingCurrency__c</referenceTo>
+        <relationshipLabel>Payable Invoices</relationshipLabel>
+        <relationshipName>PurchaseInvoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__InvoiceDate__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The date the payable invoice was created.</description>
+        <externalId>false</externalId>
+        <label>Invoice Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>c2g__InvoiceDescription__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A description of the payable invoice.</description>
+        <externalId>false</externalId>
+        <label>Invoice Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>c2g__InvoiceRate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The document to home exchange rate.</description>
+        <externalId>false</externalId>
+        <label>Invoice Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>9</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__InvoiceStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The current status of the payable invoice.</description>
+        <externalId>false</externalId>
+        <label>Invoice Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discarded</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>c2g__InvoiceTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The total value of all items and expenses on the payable invoice, including the tax.</description>
+        <externalId>false</externalId>
+        <formula>c2g__NetTotal__c  +  c2g__TaxTotal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Invoice Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__ItemsNetTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total value of product items on the invoice, before tax.
+SUM: Payable Invoice Line Item: NetValue</description>
+        <externalId>false</externalId>
+        <label>Items Net Total</label>
+        <summarizedField>c2g__codaPurchaseInvoiceLineItem__c.c2g__NetValue__c</summarizedField>
+        <summaryForeignKey>c2g__codaPurchaseInvoiceLineItem__c.c2g__PurchaseInvoice__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>c2g__ItemsTax1Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sum of tax 1 posted to Product Line Items.</description>
+        <externalId>false</externalId>
+        <label>Items Tax 1 Total</label>
+        <summarizedField>c2g__codaPurchaseInvoiceLineItem__c.c2g__TaxValue1__c</summarizedField>
+        <summaryForeignKey>c2g__codaPurchaseInvoiceLineItem__c.c2g__PurchaseInvoice__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>c2g__ItemsTax2Total__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sum of tax 2 posted to Product Line Items.</description>
+        <externalId>false</externalId>
+        <label>Items Tax 2 Total</label>
+        <summarizedField>c2g__codaPurchaseInvoiceLineItem__c.c2g__TaxValue2__c</summarizedField>
+        <summaryForeignKey>c2g__codaPurchaseInvoiceLineItem__c.c2g__PurchaseInvoice__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>c2g__MatchType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(c2g__Transaction__r.c2g__MatchType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Match Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__NetTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The total value of items and expenses on the puchase invoice, before tax.</description>
+        <externalId>false</externalId>
+        <formula>c2g__ItemsNetTotal__c  +  c2g__ExpensesNetTotal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__OutstandingValue__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>c2g__Transaction__r.c2g__DocumentOutstandingTotal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Outstanding Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__OwnerCompany__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <referenceTo>c2g__codaCompany__c</referenceTo>
+        <relationshipLabel>Payable Invoices</relationshipLabel>
+        <relationshipName>PurchaseInvoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__PaymentStatus__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>if( NOT( ISPICKVAL( c2g__InvoiceStatus__c, &apos;Complete&apos; ) ),
+&apos;Not Applicable&apos;,
+if( c2g__Transaction__r.c2g__DocumentOutstandingTotal__c == 0, &apos;Paid&apos;,
+if( c2g__Transaction__r.c2g__DocumentTotal__c == c2g__Transaction__r.c2g__DocumentOutstandingTotal__c, &apos;Unpaid&apos;,
+&apos;Part Paid&apos; ) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Payment Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__Period__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Financial period</description>
+        <externalId>false</externalId>
+        <label>Period</label>
+        <referenceTo>c2g__codaPeriod__c</referenceTo>
+        <relationshipLabel>Payable Invoices</relationshipLabel>
+        <relationshipName>PurchaseInvoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__Reference1__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reference 1</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__Reference2__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reference 2</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__RegisteredDate__c</fullName>
+        <defaultValue>TODAY()</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Registered Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>c2g__TaxCode1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Tax Code 1</label>
+        <referenceTo>c2g__codaTaxCode__c</referenceTo>
+        <relationshipLabel>Payable Invoices (Tax Code)</relationshipLabel>
+        <relationshipName>PurchaseInvoicesTaxCode</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__TaxTotal__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>c2g__ItemsTax1Total__c  +  c2g__ExpensesTax1Total__c + c2g__ItemsTax2Total__c  +  c2g__ExpensesTax2Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tax Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__Transaction__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Transaction</label>
+        <referenceTo>c2g__codaTransaction__c</referenceTo>
+        <relationshipLabel>Payable Invoices</relationshipLabel>
+        <relationshipName>PurchaseInvoices</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>c2g__UnitOfWork__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Unit of Work</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__VATRegistrationNumber__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>c2g__Account__r.c2g__CODAVATRegistrationNumber__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tax Registration Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>c2g__Year__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>c2g__Period__r.c2g__YearName__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Year</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ffbext__Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Approved</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Payable Invoice</label>
+    <listViews>
+        <fullName>FF_Fly_Now_Pay_Later_Limited_06936813_codaPurchaseInvoice</fullName>
+        <filterScope>Queue</filterScope>
+        <label>FF Fly Now Pay Later Limited (06936813)</label>
+        <queue>FF_Fly_Now_Pay_Later_Limited_06936813</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>FF_Travelfund_Limited_codaPurchaseInvoice</fullName>
+        <filterScope>Queue</filterScope>
+        <label>FF Travelfund Limited</label>
+        <queue>FF_Travelfund_Limited</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>FF_Travelfund_co_uk_Limited_codaPurchaseInvoice</fullName>
+        <filterScope>Queue</filterScope>
+        <label>FF Travelfund.co.uk Limited</label>
+        <queue>FF_Travelfund_co_uk_Limited</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>c2g__All</fullName>
+        <columns>NAME</columns>
+        <columns>c2g__Account__c</columns>
+        <columns>c2g__AccountInvoiceNumber__c</columns>
+        <columns>c2g__InvoiceDate__c</columns>
+        <columns>c2g__Period__c</columns>
+        <columns>c2g__DueDate__c</columns>
+        <columns>c2g__InvoiceCurrency__c</columns>
+        <columns>c2g__InvoiceTotal__c</columns>
+        <columns>c2g__InvoiceStatus__c</columns>
+        <columns>c2g__RegisteredDate__c</columns>
+        <columns>c2g__DiscardReason__c</columns>
+        <columns>c2g__PaymentStatus__c</columns>
+        <columns>c2g__OutstandingValue__c</columns>
+        <columns>c2g__OwnerCompany__c</columns>
+        <columns>c2g__MatchType__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PIN{000000}</displayFormat>
+        <label>Payable Invoice Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Payable Invoices</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>c2g__Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>c2g__AccountInvoiceNumber__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>c2g__InvoiceDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>c2g__Period__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>c2g__DueDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>c2g__InvoiceCurrency__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>c2g__InvoiceTotal__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>c2g__InvoiceStatus__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>c2g__OwnerCompany__c</customTabListAdditionalFields>
+        <listViewButtons>c2g__PlaceOnHold</listViewButtons>
+        <listViewButtons>c2g__ReleaseForPayment</listViewButtons>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>c2g__Classic_Edit</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Classic Edit</masterLabel>
+        <openType>sidebar</openType>
+        <page>c2g__payableinvoiceclassicedit</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>c2g__Classic_View</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Classic View</masterLabel>
+        <openType>sidebar</openType>
+        <page>c2g__codapurchaseinvoiceview</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>c2g__Manage_Expense_Lines</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Manage Expense Lines</masterLabel>
+        <openType>sidebar</openType>
+        <page>c2g__payableinvoicemanageexp</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>c2g__Manage_Product_Lines</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Manage Product Lines</masterLabel>
+        <openType>sidebar</openType>
+        <page>c2g__payableinvoicemanageprd</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>c2g__PlaceOnHold</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Place on Hold</masterLabel>
+        <openType>sidebar</openType>
+        <page>c2g__purchaseinvoiceplaceonhold</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>c2g__Post</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Post</masterLabel>
+        <openType>sidebar</openType>
+        <page>c2g__payableinvoicepost</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>c2g__ReleaseForPayment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Release for Payment</masterLabel>
+        <openType>sidebar</openType>
+        <page>c2g__purchaseinvoicereleaseforpayment</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>ffbext__Post</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Post</masterLabel>
+        <openType>sidebar</openType>
+        <page>ffbext__codabepayableinvoicebulkposting</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>ffbext__ShowFinancialForceView</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Show FinancialForce View</masterLabel>
+        <openType>sidebar</openType>
+        <page>c2g__codapurchaseinvoiceview</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

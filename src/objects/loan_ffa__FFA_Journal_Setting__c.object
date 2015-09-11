@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>loan_ffa__Batch_Notification_Email__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Batch Notification Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Daily_Interest_Accrual_Journal__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Daily Interest Accrual Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Dishonor_Fee_Journal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Dishonor Fee Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Dishonor_Fee_Reversal_Journal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Dishonor Fee Reversal Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Fee_Payment_Journal__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Fee Pmt Journal (Deprecated)</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Late_Fee_Journal__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Late Fee Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Late_Fee_Reversal_Journal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked if the Late Fee Reversal Journal is to be created</inlineHelpText>
+        <label>Generate Late Fee Reversal Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Loan_Funding_Journal__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Loan Funding Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Loan_Repayment_Journal__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Loan Repayment Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Loan_Repayment_Reversal_Journal__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Loan Repayment Reversal Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Orig_Fee_Journal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Orig Fee Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_OriginationFee_Reversal_Journal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Checked, if Origination Fee Reversal Journal is to be created.</inlineHelpText>
+        <label>Generate OriginationFee Reversal Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_ServiceFeeReversal_Journal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate ServiceFeeReversal Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Service_Fee_Journal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Service Fee Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_TaxReversal_Journal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate TaxReversal Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Generate_Tax_Journal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Generate Tax Journal</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Loan_Funding_Journal_Creation_Batch_Size__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Batch size for Loan Funding Journal Creation Job.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Batch size for Loan Funding Journal Creation Job.</inlineHelpText>
+        <label>Loan Funding Journal Creation Batch Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Loan_Payment_Journal_Creation_Batch_Size__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Batch size for Loan Payment Journal Creation Job batch.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Batch size for Loan Payment Journal Creation Job batch.</inlineHelpText>
+        <label>Loan Payment Journal Creation Batch Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan_ffa__Payment_Reversal_Journal_Creation_Size__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Batch size for Payment Reversal Journal Creation Job.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Batch size for Payment Reversal Journal Creation Job.</inlineHelpText>
+        <label>Payment Reversal Journal Creation Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>FFA Journal Generation Settings</label>
+</CustomObject>

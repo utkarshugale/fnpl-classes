@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>loan__ACH_File_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Possible values:
+CSV
+TEXT</inlineHelpText>
+        <label>ACH File Type</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__ACH_Id__c</fullName>
+        <defaultValue>&quot;&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is used to describe the input file for internal accounting purposes</inlineHelpText>
+        <label>ACH Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__ACH_Return_Filegen__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This class will be instantiated at runtime to parse the ACH returns.</inlineHelpText>
+        <label>ACH Return Filegen</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Broker_Transaction_Filegen__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Broker Transaction Filegen</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Days_In_Advance_To_Create_File__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This value is used to determine the number of business days prior to a payment&apos;s due date for inclusion in an ACH file. This is applicable to all transactions.</inlineHelpText>
+        <label>Days In Advance To Create File</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Debit_Payment_on_Previous_Working_Day__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If this option is selected, the loan payment ACH job picks up payments for debiting the previous working day. For example, if a payment fell on a Sunday, the system would include it in Friday&apos;s ACH file.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this option is selected, the loan payment ACH job picks up payments for debiting the previous working day. For example, if a payment fell on a Sunday, the system would include it in Friday&apos;s ACH file. (Future Use)</inlineHelpText>
+        <label>Debit Loan Pmt on Previous Working Day</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Fed_Tax_Id__c</fullName>
+        <defaultValue>&quot;&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a 9 digit number used to identify all the business entities in the US for tax purposes.</inlineHelpText>
+        <label>Fed Tax Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Fee_Payment_Transaction_Filegen__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Fee Payment Transaction Filegen</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Folder_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The generated ACH file is dropped in this folder. If this field is null, the ACH file is dropped in the current user&apos;s personal files.</inlineHelpText>
+        <label>Folder Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Immediate_Destination__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Immediate Destination</label>
+        <length>9</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Investor_Deposit_Transaction_Filegen__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This class will be instantiated at runtime to generate the banking file for Investor Deposits.</inlineHelpText>
+        <label>Investor Deposit Transaction Filegen</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Investor_Payment_Transaction_Filegen__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This class will be instantiated at runtime to generate the banking file for Investor Payments.</inlineHelpText>
+        <label>Investor Payment Transaction Filegen</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Investor_Withdrawal_Transaction_Filegen__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This class will be instantiated at runtime to generate the banking file for Investor Withdrawals.</inlineHelpText>
+        <label>Investor Withdrawal Transaction Filegen</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Disbursal_Transaction_Filegen__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This class will be instantiated at runtime to generate the banking file for Loan Disbursals.</inlineHelpText>
+        <label>Loan Disbursal Transaction Filegen</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Payment_Transaction_Filegen__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This class will be instantiated at runtime to generate the banking file for Loan Payments.</inlineHelpText>
+        <label>Loan Payment Transaction Filegen</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Lock_Period_for_Investor_Funds__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>The investor fund transactions are cleared only after the lock period number of business days have passed since creation. Till then the funds remain in an uncleared state.</inlineHelpText>
+        <label>Lock Period for Investor Funds</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Lock_Period_for_Loan_Payments__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Loan payment transactions are cleared only after the lock period number of business days have passed since creation. Till then the payments remain in an uncleared state.</inlineHelpText>
+        <label>Lock Period for Loan Payments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Merge_One_Time_and_Recurring_ACH__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag decides whether one time and recurring ACH should be merged if falls on same day</inlineHelpText>
+        <label>Merge One Time and Recurring ACH</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Multiple_Payment_Method_Support__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Multiple Payment Method Support</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Organization_Name__c</fullName>
+        <defaultValue>&quot;&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the organization name of the customer</inlineHelpText>
+        <label>Organization Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Originating_DFI_Identification__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Originating DFI Identification</label>
+        <length>9</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Query_For_Investor_Fund_Clearing__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This class must implement IQueryBuilder. This will be used to get the query for clearing Investor Deposit Transactions.</inlineHelpText>
+        <label>Query For Investor Fund Clearing</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Query_For_Loan_Payment_Clearing__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This class must implement IQueryBuilder. It will be used to get the query for clearing loan payments.</inlineHelpText>
+        <label>Query For Loan Payment Clearing</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Trace_Number_Prefix__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Trace Number Prefix</label>
+        <length>8</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Use_Lock_Based_ACH__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this option is selected, loan payments are created automatically in an uncleared status. Based on the lock period, uncleared transactions are auto cleared by the system.</inlineHelpText>
+        <label>Use Lock Based ACH</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>peer__Disbursement_Schedule_Reversal_Filegen__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Disbursement Schedule Reversal Filegen</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Loan_Cancellation_Payment_Filegen__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Loan Cancellation Payment Filegen</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>ACH Parameters</label>
+</CustomObject>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Setup object to store the default commission plans for different broker levels</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>loan__Broker_Level_Contract_Type_Key__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Field used to store the unique key created by combining Broker Level, Contract Type and Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unique key created by combining Broker Level and Contract Type</inlineHelpText>
+        <label>Broker Level-Contract Type-Product Key</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Broker_Level__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Primary Broker for a contract has Broker Level as 1. Its Parent Broker has Broker Level as 2 and so on.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Broker position in the broker hierarchy. Primary Broker has broker level &apos;1&apos;, its parent broker has level &apos;2&apos; and so on.</inlineHelpText>
+        <label>Broker Level</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Contract_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Contract Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract Type</inlineHelpText>
+        <label>Contract Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>loan__Default_Commission_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Default Commission Plan for this Broker Level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Commission Plan for this Broker Level.</inlineHelpText>
+        <label>Default Commission Plan</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>loan__Commission_Plan__c.loan__Enabled__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>loan__Commission_Plan__c</referenceTo>
+        <relationshipLabel>Default Commission Hierarchy</relationshipLabel>
+        <relationshipName>Default_Commission_Hierarchy</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Lending_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Lending Product</label>
+        <referenceTo>loan__Loan_Product__c</referenceTo>
+        <relationshipLabel>Broker Commission Hierarchy</relationshipLabel>
+        <relationshipName>Default_Commission_Hierarchy</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Default Commission Hierarchy</label>
+    <nameField>
+        <displayFormat>CHRI-{0000}</displayFormat>
+        <label>Commission Hierarchy Record Id</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Default Commission Hierarchy</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>loan__Commission_Plan_Not_Null_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(loan__Default_Commission_Plan__c)</errorConditionFormula>
+        <errorDisplayField>loan__Default_Commission_Plan__c</errorDisplayField>
+        <errorMessage>Default Commission Plan cannot be blank.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>loan__Manage_Defaults</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Manage Defaults</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/defaultCommHierarchyPage?lendingProductId={!loan__Loan_Product__c.Id}</url>
+    </webLinks>
+</CustomObject>

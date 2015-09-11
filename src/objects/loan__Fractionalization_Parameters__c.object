@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>loan__Collect_Service_Fees_on_Total_Payment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this is selected, the service fees for the platform is collected from the total borrower repayment. If this is not selected the service fees is only collected from the borrower payment&apos;s interest and fees.</inlineHelpText>
+        <label>Collect Service Fees on Total Payment</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Investor_Payout_Job_batch_Size__c</fullName>
+        <defaultValue>50</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>You must keep this number low, if there are large number of Investment orders per batch.</inlineHelpText>
+        <label>Investor Payout Job batch Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Manual_Investor_Payment_Release__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If selected, payments to investors are released manually using the Release Payments button on an investment order and subsequently the reinvestment amount becomes available. If this is not selected, the reinvestment amount becomes available immediately.</inlineHelpText>
+        <label>Manual Investor Payment Release</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Withhold_Tax_on_Income_Less_Service_Fees__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Select this option if tax must be withheld on an investor&apos;s income minus the service fees. Unchecking this option would mean that tax is withheld on the investor&apos;s income irrespective of the service fees. In most cases this should be checked.</inlineHelpText>
+        <label>Withhold Tax on Income Less Service Fees</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>peer__Global_VAT_Percentage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Global VAT percentage.</description>
+        <externalId>false</externalId>
+        <label>Global VAT Percentage</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>peer__Origination_Fee_Included_in_Loan_Amount__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>If this is checked, amount disbursed would be requested loan amount - origination fee. If this is not checked, amount disbursed would be requested loan amount and loan amount would be requested amount + origination fee</inlineHelpText>
+        <label>Origination Fee in the Requested Amount</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>peer__PortfolioBuilder__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Portfolio builder class which should implement IPortfolioBuilder.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Portfolio builder class which should implement IPortfolioBuilder.</inlineHelpText>
+        <label>PortfolioBuilder</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Fractionalization Parameters</label>
+</CustomObject>

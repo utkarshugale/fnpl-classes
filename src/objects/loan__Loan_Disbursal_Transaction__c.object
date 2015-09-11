@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>This is the final stage where all the documents submitted by a customer are finally checked and the loan is approved.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Customer_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>loan__Loan_Account__r.loan__Contact__r.FirstName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Disbursal_Transaction_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;DTID-&apos; + Text(value(
+
+      (left(right(text(now()),6),2))&amp;     
+
+      text(DAY(DATEVALUE(now())))&amp;
+
+      text(Month(DATEVALUE(now())))&amp;
+
+      text(Year(DATEVALUE(now())))&amp;
+
+      (left(right(text(now()),9),2))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Disbursal Transaction Id</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_to_Send_Notification__c</fullName>
+        <externalId>false</externalId>
+        <label>Email to Send Notification</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Account_Reference__c</fullName>
+        <externalId>false</externalId>
+        <label>Funding Account Reference</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Merchant_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Partner__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Merchant Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Partner</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Loan Disbursal Transactions</relationshipLabel>
+        <relationshipName>Loan_Disbursal_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__ACH_Filename__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>ACH Filename</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Bank_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Bank Account</label>
+        <referenceTo>loan__Bank_Account__c</referenceTo>
+        <relationshipLabel>Loan Disbursal Transactions</relationshipLabel>
+        <relationshipName>Loan_Disbursal_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Check__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Check</label>
+        <referenceTo>loan__Check__c</referenceTo>
+        <relationshipLabel>Loan Disbursal Transactions</relationshipLabel>
+        <relationshipName>Loan_Disbursal_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Cleared_Reversal_Txn_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cleared Reversal Txn Count</label>
+        <summaryFilterItems>
+            <field>loan__Disbursal_Adjustment__c.loan__Cleared__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>loan__Disbursal_Adjustment__c.loan__Loan_Disbursal_Transaction__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>loan__Cleared__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cleared</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Custom_Logic__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Custom Funding Logic</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Disbursal_Date__c</fullName>
+        <defaultValue>$User.loan__Current_Branch_s_System_Date__c</defaultValue>
+        <deprecated>false</deprecated>
+        <description>By default, this is the date specified in the proposed disbursal date in the account details. If the date is modified during loan disbursal, the repayment schedule is regenerated accordingly.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>By default, this is the date specified in the proposed disbursal date in the account details. If the date is modified during loan disbursal, the repayment schedule is regenerated accordingly.</inlineHelpText>
+        <label>Disbursal Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Disbursed_Amt__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Disbursal Transaction Amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Disbursal Transaction Amount</inlineHelpText>
+        <label>Disbursal Transaction Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Financed_Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount to be disbursed to borrower.</inlineHelpText>
+        <label>Financed Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Loan_Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Loan Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Loan Account</inlineHelpText>
+        <label>Loan Account</label>
+        <referenceTo>loan__Loan_Account__c</referenceTo>
+        <relationshipLabel>Loan Disbursal Transactions</relationshipLabel>
+        <relationshipName>Loan_Disbursal_Transactions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>loan__Mode_of_Payment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Mode of Payment</label>
+        <referenceTo>loan__Payment_Mode__c</referenceTo>
+        <relationshipLabel>Loan Disbursal Transactions</relationshipLabel>
+        <relationshipName>Loan_Disbursal_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>loan__Pre_Paid_Fee__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the sum of all prepaid fees defined on the contract.</inlineHelpText>
+        <label>Total Pre-Paid Fees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Receipt_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Receipt ID</description>
+        <displayFormat>RID-{0000000000}</displayFormat>
+        <externalId>false</externalId>
+        <inlineHelpText>Receipt ID</inlineHelpText>
+        <label>Receipt ID</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>loan__Reference__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reference</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Refinanced_Amount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Sum of the pay-off amounts of refinanced loan accounts</inlineHelpText>
+        <label>Total Refinanced Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>loan__Rejected__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rejected</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Reversed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reversed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>loan__Sent_To_ACH_On__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the date the transaction was sent to ACH. The lock period for clearing is counted from this date.</inlineHelpText>
+        <label>Sent To ACH On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>loan__Sent_To_ACH__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sent To ACH</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>peer__Bank_Statement_Exception__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Bank Statement Exception</label>
+        <referenceTo>peer__Bank_Recon_Exception__c</referenceTo>
+        <relationshipLabel>Loan Disbursal Transactions</relationshipLabel>
+        <relationshipName>Loan_Disbursal_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>peer__Verification__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Verification</label>
+        <referenceTo>peer__Verification__c</referenceTo>
+        <relationshipLabel>Loan Disbursal Transactions</relationshipLabel>
+        <relationshipName>Loan_Disbursal_Transactions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Loan Disbursal Transaction</label>
+    <nameField>
+        <displayFormat>LDTI-{0000000000}</displayFormat>
+        <label>Loan Disbursal Transaction ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Loan Disbursal Transactions</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>loan__Receipt_ID__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>loan__Disbursal_Date__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Receipt_ID__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>loan__Disbursal_Date__c</lookupPhoneDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>loan__Check_Draw_Period</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNEW() &amp;&amp; AND( ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Line Of Credit&apos;),loan__Disbursal_Date__c&gt;DATE(
+year(loan__Loan_Account__r.loan__Disbursal_Date__c)
++ floor((month(loan__Loan_Account__r.loan__Disbursal_Date__c) + loan__Loan_Account__r.loan__draw_term__c)/12) + if(and(month(loan__Loan_Account__r.loan__Disbursal_Date__c)=12,loan__Loan_Account__r.loan__draw_term__c&gt;=12),-1,0)
+,
+if( mod( month(loan__Loan_Account__r.loan__Disbursal_Date__c) + loan__Loan_Account__r.loan__draw_term__c , 12 ) = 0, 12 , mod( month(loan__Loan_Account__r.loan__Disbursal_Date__c) + loan__Loan_Account__r.loan__draw_term__c , 12 ))
+,
+min( 
+day(loan__Loan_Account__r.loan__Disbursal_Date__c),
+case(
+max( mod( month(loan__Loan_Account__r.loan__Disbursal_Date__c) + loan__Loan_Account__r.loan__draw_term__c , 12 ) , 1),
+9,30,
+4,30,
+6,30,
+11,30,
+2,28,
+31
+)
+)
+))</errorConditionFormula>
+        <errorMessage>Advance date is after draw period expiry date, disbursement not allowed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Check_Existing_Disbursal_Txn</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNEW()  &amp;&amp; AND(loan__Loan_Account__r.loan__Cleared_Disbursal_Txn_Count__c &gt; 0, ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Loan&apos;), NOT( loan__Loan_Account__r.loan__Funding_in_Tranches__c))</errorConditionFormula>
+        <errorMessage>This loan account has already been disbursed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Cheque_Mode_Check</fullName>
+        <active>false</active>
+        <errorConditionFormula>loan__Mode_of_Payment__r.Name == &apos;Check&apos; &amp;&amp; ISBLANK( loan__Check__c )</errorConditionFormula>
+        <errorMessage>Please  input a check.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Disbursal_Date_Null_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(loan__Disbursal_Date__c)</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date cannot be null.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Expected_Disbursal_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(AND(NOT(ISBLANK(loan__Loan_Account__r.loan__Expected_Disbursal_Date__c)), NOT(ISBLANK(loan__Disbursal_Date__c)),(loan__Disbursal_Date__c &lt;  loan__Loan_Account__r.loan__Expected_Disbursal_Date__c)), AND(NOT(ISBLANK(loan__Loan_Account__r.loan__Disbursal_Date__c)), NOT(ISBLANK(loan__Disbursal_Date__c)),(loan__Disbursal_Date__c &lt;  loan__Loan_Account__r.loan__Disbursal_Date__c)))</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date should be on or after the Contract Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__FiT_Last_Accrual_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Loan&apos;), loan__Loan_Account__r.loan__Funding_in_Tranches__c, ( loan__Loan_Account__r.loan__Cleared_Disbursal_Txn_Count__c &gt; 0), NOT(ISBLANK(loan__Loan_Account__r.loan__Last_Accrual_Date__c)), (loan__Disbursal_Date__c  &lt;  loan__Loan_Account__r.loan__Last_Accrual_Date__c))</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date cannot be before the Last Interest Accrual Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__FiT_Last_Billing_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Loan&apos;), loan__Loan_Account__r.loan__Funding_in_Tranches__c, ( loan__Loan_Account__r.loan__Cleared_Disbursal_Txn_Count__c &gt; 0), NOT(ISBLANK(loan__Loan_Account__r.loan__Previous_Installment_Date__c)), (loan__Disbursal_Date__c  &lt;  loan__Loan_Account__r.loan__Previous_Installment_Date__c))</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date cannot be before the Last Billing Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__FiT_Last_Disbursal_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Loan&apos;), loan__Loan_Account__r.loan__Funding_in_Tranches__c, ( loan__Loan_Account__r.loan__Cleared_Disbursal_Txn_Count__c &gt; 0), NOT(ISBLANK(loan__Loan_Account__r.loan__Last_Disbursal_Date__c )), (loan__Disbursal_Date__c  &lt;  loan__Loan_Account__r.loan__Last_Disbursal_Date__c ))</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date cannot be before the Last Disbursal Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__FiT_Last_Payment_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Loan&apos;), loan__Loan_Account__r.loan__Funding_in_Tranches__c, ( loan__Loan_Account__r.loan__Cleared_Disbursal_Txn_Count__c &gt; 0), NOT(ISBLANK(loan__Loan_Account__r.loan__Last_Payment_Date__c)), (loan__Disbursal_Date__c  &lt;  loan__Loan_Account__r.loan__Last_Payment_Date__c))</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date cannot be before the Last Payment Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__First_Payment_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Loan&apos;), NOT(loan__Loan_Account__r.loan__Funding_in_Tranches__c),( loan__Loan_Account__r.loan__Cleared_Disbursal_Txn_Count__c = 0), NOT(ISBLANK(loan__Loan_Account__r.loan__First_Installment_Date__c) ), NOT(ISBLANK(loan__Disbursal_Date__c) ), (loan__Disbursal_Date__c  &gt;  loan__Loan_Account__r.loan__First_Installment_Date__c))</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date should be on or before the First Payment Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Internal_Transfer_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Mode_of_Payment__r.Name == &apos;Internal Transfer&apos; &amp;&amp; ISBLANK( loan__Loan_Account__r.loan__Savings_Account__c )</errorConditionFormula>
+        <errorMessage>No savings account is linked to this loan to perform an internal transfer.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__LOC_Last_Accrual_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Line of Credit&apos;), ( loan__Loan_Account__r.loan__Cleared_Disbursal_Txn_Count__c &gt; 0), NOT(ISBLANK(loan__Loan_Account__r.loan__Last_Accrual_Date__c)), (loan__Disbursal_Date__c  &lt;  loan__Loan_Account__r.loan__Last_Accrual_Date__c))</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date cannot be before the Last Interest Accrual Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__LOC_Last_Billing_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Line of Credit&apos;), ( loan__Loan_Account__r.loan__Cleared_Disbursal_Txn_Count__c &gt; 0), NOT(ISBLANK(loan__Loan_Account__r.loan__Previous_Installment_Date__c)), (loan__Disbursal_Date__c  &lt;  loan__Loan_Account__r.loan__Previous_Installment_Date__c))</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date cannot be before the Last Billing Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__LOC_Last_Disbursal_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Line of Credit&apos;), ( loan__Loan_Account__r.loan__Cleared_Disbursal_Txn_Count__c &gt; 0), NOT(ISBLANK(loan__Loan_Account__r.loan__Last_Disbursal_Date__c)), (loan__Disbursal_Date__c  &lt;  loan__Loan_Account__r.loan__Last_Disbursal_Date__c))</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date cannot be before the Last Disbursal Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__LOC_Last_Payment_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(loan__Loan_Account__r.loan__Product_Type__c, &apos;Line of Credit&apos;), ( loan__Loan_Account__r.loan__Cleared_Disbursal_Txn_Count__c &gt; 0), NOT(ISBLANK(loan__Loan_Account__r.loan__Last_Payment_Date__c)), (loan__Disbursal_Date__c  &lt;  loan__Loan_Account__r.loan__Last_Payment_Date__c))</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date cannot be before the Last Payment Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Loan_Status_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNEW() &amp;&amp; 
+(TEXT(loan__Loan_Account__r.loan__Loan_Status__c) = &apos;Partial Application&apos; ||  TEXT(loan__Loan_Account__r.loan__Loan_Status__c) = &apos;Pending Approval&apos; ||  TEXT(loan__Loan_Account__r.loan__Loan_Status__c) = &apos;Canceled&apos; ||  TEXT(loan__Loan_Account__r.loan__Loan_Status__c) = &apos;Closed - Obligations met&apos; ||
+TEXT(loan__Loan_Account__r.loan__Loan_Status__c) = &apos;Closed - Rescheduled&apos; ||
+TEXT(loan__Loan_Account__r.loan__Loan_Status__c) = &apos;Closed- Written Off&apos; ||
+TEXT(loan__Loan_Account__r.loan__Loan_Status__c) = &apos;Disbursed to LO&apos; ||
+TEXT(loan__Loan_Account__r.loan__Loan_Status__c) = &apos;Partial Application&apos;)</errorConditionFormula>
+        <errorMessage>Invalid Loan Status. You cannot disburse this loan.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>loan__Transaction_Date_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>loan__Disbursal_Date__c &gt; TODAY()</errorConditionFormula>
+        <errorMessage>Disbursal Transaction Date cannot be greater than calendar date.</errorMessage>
+    </validationRules>
+</CustomObject>
